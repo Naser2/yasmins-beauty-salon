@@ -229,7 +229,7 @@ function  Footer(){
       </div>
   </div>
   <div class="container bg-ochre">
-      <div class="flex justify-between items-center text-flamingo h-btn">
+      <div class="flex justify-between items-center text-white  hover:text-flamingo h-btn">
           <span class="uppercase text-sans-xs-caps">© 2025 YASMINS BEAUTY SALON LLC</span>
           <ul class="font-sans text-xs tracking-plus leading-relaxed flex">
               <li class="mr-6 hidden lg:block">

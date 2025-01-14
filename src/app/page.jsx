@@ -10,15 +10,7 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+
 import imageLaptop from '@/images/laptop.jpg'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
 import clsx from 'clsx'
@@ -256,7 +248,7 @@ function BestSellers() {
                           {/* grayscale */}
                           <div className="relative inset-0  bottom-0 flex flex-col justify-end p-6">
                       {/* bg-gradient-to-t from-black to-black/0 to-40%  */}
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-black">
+                            <p className="font-display text-base/6 font-semibold tracking-wide text-black text-[#011211]">
                               {person.name}
                             </p>
                             <p className="mt-2 text-sm text-black">
@@ -343,80 +335,74 @@ export default async function Home() {
   return (
     <>
   <FadeInStagger key={'HOME-PAGE'}>
-      {/* <Container className="mt-24 sm:mt-32 md:mt-56"> */}
-        <FadeIn className="max-w-7x">
-        <>
-     
-     <div className='page-container drawer-page-content massi' >
-       <div className='main-content'>
-         <div className="relative sm:-mt-38 lg:-mt-[0%] slideshow__slide  slick-slide slick-current slick-active index-section " data-slick-index="0" aria-hidden="false"
-         style={{width:"100%", position: 'relative', left: '0px', top: '0px', 'z-index':'999', opacity: 1}} 
-         >
-           <a href="#COLLECTION" className="slideshow__link" tabindex="0">
-           <img src={'/yasmin_intro_desktop.gif'} id="DESKTOP_IMG"  className='h-full ] w-full max-[700px]:hidden'/>
-           <img src={'/yasmin_intro_mobile.gif'} id="MOBILE_IMG" className='aspect-[5/6] object-center object-cover min-h-[60vh h-full w-full min-[700px]:hidden'/>
-           {/* <img src={massiLG.src} className='h-full w-full max-[700px]:hidden'/>
-           <img src={massi.src} className='h-full w-full min-[700px]:hidden'/> */}
-           </a> 
-         <Intro />
-         </div>
- 
-        <FadeInStagger key={'New Collection'}>
-         <FadeIn>
-           <div id="COLLECTION" className="relative shopify-section index-section  overflow-hidden">
-               <div className="page-width pt-4 sm:pt-12" id="1a23616c-8a74-41e2-a062-803892398db5"> 
-                 <div className="section-header home text-center wow fadeIn" style={{visibility: 'visible', animationName:'fadeIn'}}>
-                   <h2>NEW COLLECTION</h2>      
-                       <p> CUSTOM WIGS | PRE-SELECTED STYLES &amp; COLOR</p>        
-                 </div>
-                   <div id="products-1a23616c-8a74-41e2-a062-803892398db5" className="grid-products">
-                   <Team />
-                   </div>
-                 </div>
-               </div>  
-             </FadeIn> 
-         </FadeInStagger>
-        </div>
-      </div>
-    
-      <div id="quiz-kit-intro" className="py-24 relative sc-AxjAm knkQuy center-center " 
-      data-aos="fade-up" 
-      > 
+     <FadeIn className="max-w-7x">
+       <div>
+        <div className='page-container drawer-page-content massi' >
+          <div className='main-content'>
+            <div className="relative sm:-mt-38 lg:-mt-[0%] slideshow__slide  slick-slide slick-current slick-active index-section lg:!min-h-[643px] " data-slick-index="0" aria-hidden="false"
+            style={{width:"100%", position: 'relative', left: '0px', top: '0px', 'z-index':'999', opacity: 1}} >
+              <div href="#HOME" className="slideshow__link lg:!min-h-[643px] " tabindex="0" >
+              <img src={'/yasmin_intro_desktop.gif'} id="DESKTOP_IMG"  className='h-full ] w-full max-[700px]:hidden h-full !aspect-[400/234] l:aspect-[5/6] '/>
+              <img src={'/yasmin_intro_mobile.gif'} id="MOBILE_IMG" className='h-full aspect-[5/6] object-center object-cover min-h-[60vh lg:!min-h-[643px]  sm:!h-full  w-full min-[700px]:hidden'/>
+            
+              </div> 
+              <Intro />
+            </div>
+            <FadeInStagger key={'New Collection'}>
+            <FadeIn>
+              <div id="COLLECTION" className="relative shopify-section index-section  overflow-hidden">
+                  <div className="page-width pt-4 sm:pt-12" id="1a23616c-8a74-41e2-a062-803892398db5"> 
+                    <div className="section-header home text-center wow fadeIn" style={{visibility: 'visible', animationName:'fadeIn'}}>
+                      <h2>NEW COLLECTION</h2>      
+                          <p className='text-[#011211]'> CUSTOM WIGS | PRE-SELECTED STYLES &amp; COLOR</p>        
+                    </div>
+                      <div id="products-1a23616c-8a74-41e2-a062-803892398db5" className="grid-products">
+                      <Team />
+                      </div>
+                    </div>
+                  </div>  
+                </FadeIn> 
+            </FadeInStagger>
+            </div>
+          </div>
+      <div id="quiz-kit-intro" className="py-24 relative sc-AxjAm knkQuy center-center "  data-aos="fade-up"> 
       <FadeInStagger key={'Book Now 2'}>
          <FadeIn>
-        <picture>
-         <source media="(max-width: 767px)" srcset="https://d33x1o3gj9io8i.cloudfront.net/images/4190/OqULuoMQkaQGSqCQuu46" type="image/gif"/>
-         <source media="(max-width: 1200px)" srcset="https://d33x1o3gj9io8i.cloudfront.net/images/4190/md_DnRYal1MQ7qrNOSkcVUP" type="image/gif"/>
-         <img src="https://d33x1o3gj9io8i.cloudfront.net/images/4190/DnRYal1MQ7qrNOSkcVUP" alt="NEED A LITTLE HELP?"/>
-         </picture>
+            <picture>
+                <source media="(max-width: 767px)" srcset="https://d33x1o3gj9io8i.cloudfront.net/images/4190/OqULuoMQkaQGSqCQuu46" type="image/gif"/>
+                <source media="(max-width: 1200px)" srcset="https://d33x1o3gj9io8i.cloudfront.net/images/4190/md_DnRYal1MQ7qrNOSkcVUP" type="image/gif"/>
+                <img src="https://d33x1o3gj9io8i.cloudfront.net/images/4190/DnRYal1MQ7qrNOSkcVUP" alt="NEED A LITTLE HELP?"/>
+            </picture>
          </FadeIn> 
-         </FadeInStagger>
-     
-         <FadeInStagger key={'Book Now 2'}>
-         <FadeIn>
-      <div  className="h-[fit-content] sc-fzpdbB gZFNLC md:bottom-[-79%] mx-auto max-w-12xl  lg:px-8" id="SERVICES">
-       <div id="quiz-kit-container"
-             className="sc-AxirZ jddkUx center-center bg-yasmin-main  opacity-0.5">
+      </FadeInStagger>
+     <FadeInStagger key={'Book Now 2'}>
+      <FadeIn>
+      <div  className="h-[fit-content] sc-fzpdbB gZFNLC md:bottom-[-79%] mx-auto max-w-12xl  lg:px-8 " id="SERVICES">
+       <div id="quiz-kit-container"  className="sc-AxirZ jddkUx center-center bg-yasmin-main  opacity-0.5  sm:border boder-[#021c1a] rounded-sm ">
           <h1 id="quiz-kit-intro-title" 
               className="sc-AxhCb bNQaQH aos-init aos-animate" 
               style={{fontWeight: '700', width: '100%', margin: '0px auto 20px', lineHeight: '1.2', fontSize: '40px', textTransform: "none" ,letterSpacing: "initial"}}>
-              NEED A SERVICE?</h1>
-            <p id="quiz-kit-intro-text" font-size="16" font-family="Questrial"  font-weight="400" letter-spacing="0" data-aos="fade-up" data-aos-delay="150"
-              className="sc-AxhCb bosNnv aos-init aos-animate   -mt-4"  >
-                  Review our catalogue, and explore an array of services. 
-            </p >
-                  <div className="gap-x-6  md:gap-x-24 sm:space-x-4 ">
-                  <a href="#LOCATION"><button href="#/contact"
-                      id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
-                      className="sc-fznxsB cYgHSw aos-init aos-animate mr-6"
-                      style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
-                        Address</button></a>
-                <a href="#CALL"><button href="#/services"
-                      id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
-                      className="sc-fznxsB cYgHSw aos-init aos-animate bg-black  text-white hover:bg-pink-400 hover:text-white" 
-                      style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
-                        Booking</button></a>
-              </div>
+              NEED A SERVICE?
+          </h1>
+          <p id="quiz-kit-intro-text" font-size="16" font-family="Questrial"  font-weight="400" letter-spacing="0" data-aos="fade-up" data-aos-delay="150"
+            className="sc-AxhCb bosNnv aos-init aos-animate  text-[#011211] -mt-4"  >
+                Review our catalogue, and explore an array of services. 
+          </p >
+          <div className="gap-x-6  md:gap-x-24 sm:space-x-4 ">
+          <a href="#LOCATION"><button href="#/contact"
+              id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
+              className="sc-fznxsB cYgHSw aos-init aos-animate mr-6"
+              style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
+                Address</button></a>
+             <a href="#CALL">
+              <button href="#/services"
+              id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
+              className="sc-fznxsB cYgHSw aos-init aos-animate bg-[#03302c] text-white hover:bg-pink-400 hover:text-white" 
+              style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
+                Booking
+            </button>
+          </a>
+      </div>
            </div>
         </div>
       
@@ -439,10 +425,9 @@ export default async function Home() {
   </div>
 
   {/* <ContactSection /> */}
- <div className="group bg-theme-2  lg:bg-black relative mt-12  lg:mt-24 slideshow__slide  slick-slide slick-current slick-active " data-slick-index="0" aria-hidden="false"
- style={{width:"100%", position: 'relative', left: '0px', top: '0px',  opacity: 1}} 
+ <div className="group bg-theme-2  lg:bg-black relative mt-12  lg:mt-24 slideshow__slide  slick-slide slick-current slick-active border-t  border-[#03302c] " data-slick-index="0" aria-hidden="false" style={{width:"100%", position: 'relative', left: '0px', top: '0px',  opacity: 1}} 
  >
-   <div href="#/services" className="slideshow__link flex" tabindex="0">
+   <div href="#/services" className="slideshow__link flex " tabindex="0">
        <img src={'yasmin_img_desktop.png'} className='h-full w-full max-[700px]:hidden'/>
        <img src={'/yasmin_img_mobile.png'} className='h-full w-full min-[700px]:hidden'/>
     <FadeInStagger key={'INTRO'}>
@@ -452,7 +437,7 @@ export default async function Home() {
      <div className="rs-parallax-wrap mb-4 inset-x-0 xl:!pb-24"  style={{position: 'absolute' , display: 'block' ,'pointer-events': 'auto', 'z-index': 9, visibility: 'visible', perspective: '601px'}}>
       <h2 className={clsx('animation !font-bold  inline-flex text-[wheat] !text-[2.3em]  lg:text-[wheat] md:!text-[5em]  lg:!text-[4em] xl:!text-[6em]  signature-font  animated-logo pb-12')}
       >
-      YASMINS MBEAUTY</h2>
+      YASMINS BEAUTY</h2>
       </div> 
       <div className='justify-center lg:text-3xl lg:text-[wheat] max-[700px]:pt-[10%] pt-[12%] xl:pt-[11%]'>
      <p className={clsx('justify-center text-[1.4em] sm:text-[1.8em] transition duration-250 transform text-sm text-white !text-[#f8e8cd] ')}> Our specialists at your service.</p>
@@ -462,7 +447,7 @@ export default async function Home() {
       </div>  */}
       <div >
       <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300">
-         <a className={clsx(" hover:!text-[#f8e8cd] rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-black !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
+         <a className={clsx(" hover:!text-[#f8e8cd] rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-[#03302c] !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
           href="#/services"
           >Book Now </a>
       </div>
@@ -501,7 +486,7 @@ export default async function Home() {
        
        />
      </div>
-     </>
+     </div>
         </FadeIn>
       {/* </Container> */}
 
@@ -509,10 +494,8 @@ export default async function Home() {
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 =
-    <Testimonial
-        className="..lg:mt-40"
-        client={{ name: 'Phobia', logo: '/cropped-YasminBeautyShop.png'}}
-      >
+    <Testimonial className="..lg:mt-40"
+        client={{ name: 'Phobia', logo: '/cropped-YasminBeautyShop.png'}}>
         Testimonials Coming Soon
       </Testimonial> 
 

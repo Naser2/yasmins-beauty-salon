@@ -70,7 +70,7 @@ const NewContactSection = () => {
                       {item.icon}
                     </div>
                     <div>
-                      <h3 className="text-xlg text-[#eed1e3] group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2">
+                      <h3 className="text-xlg .text-[#eed1e3] group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2">
                         {item.title}
                       </h3>
                       <p className="text-gray-700 whitespace-pre-line group-hover:!text-white">
