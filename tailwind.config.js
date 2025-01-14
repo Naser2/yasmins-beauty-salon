@@ -19,8 +19,9 @@ module.exports = {
     },
     extend: {
       borderRadius: {
-        '4xl': '2.5rem',
+        '4xl': '2.5rem',   
       },
+      scrollBehavior: ['smooth'],
       fontFamily: {
         sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
         display: [
