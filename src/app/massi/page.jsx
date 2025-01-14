@@ -141,25 +141,25 @@ const bestSellers = [
         name: '5x5 HD LACE CLOSURE',
         role: '$220',
         image: { src: Bessseller1 },
-        href: 'https://mbeautehair.glossgenius.com/services/5x5-hd-lace-closure'
+        href: '#/services/5x5-hd-lace-closure'
       },
       {
         name: 'No Slip | Wig Grip',
         role: '$12',
         image: { src: Bessseller2 },
-        href: 'https://mbeautehair.glossgenius.com/services/5x5-hd-lace-closure'
+        href: '#/services/5x5-hd-lace-closure'
       },
       {
         name: '5x5 | ‘PRE-LIGHTENED’',
         role: '$520',
         image: { src: Bessseller3 },
-        href: 'https://mbeautehair.glossgenius.com/services/5x5-hd-lace-closure'
+        href: '#/services/5x5-hd-lace-closure'
       },
       {
         name: '5x5 | ‘PRE-LIGHTENED’',
         role: '$520',
         image: { src: Bessseller3 },
-        href: 'https://mbeautehair.glossgenius.com/services/5x5-hd-lace-closure'
+        href: '#/services/5x5-hd-lace-closure'
       },
     ],
   },
@@ -237,7 +237,7 @@ function BestSellers() {
                   className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8"
                 >
                   {group.people.map((person) => (
-                    <a key={person.name}   href='https://mbeautehair.glossgenius.com/services/5x5-hd-lace-closure'>
+                    <a key={person.name}   href='#/services/5x5-hd-lace-closure'>
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-1xl bg-neutral-100 rind-black ring-0">
                           <Image
@@ -290,7 +290,7 @@ export default async function Home() {
         <div className="relative -mt-38 lg:-mt-[5%] slideshow__slide  slick-slide slick-current slick-active index-section " data-slick-index="0" aria-hidden="false"
         style={{width:"100%", position: 'relative', left: '0px', top: '0px', 'z-index':'999', opacity: 1}} 
         >
-          <a href="https://mbeautehair.glossgenius.com/services" className="slideshow__link" tabindex="0">
+          <a href="#/services" className="slideshow__link" tabindex="0">
           <img src={massiLG.src} className='h-full w-full max-[700px]:hidden'/>
           <img src={massi.src} className='h-full w-full min-[700px]:hidden'/>
             {/* <img src="//erinhhair.com/cdn/shop/files/8C896AC9-881F-453B-8BA2-29D98F935A69.png?v=1676572821"/> */}
@@ -347,11 +347,11 @@ export default async function Home() {
          >
            Review my catalogue, and explore the perfect service for you. </p >
            <div className="gap-x-6  md:gap-x-24">
-           <a href="https://mbeautehair.glossgenius.com/contact"><button href="https://mbeautehair.glossgenius.com/contact"
+           <a href="#/contact"><button href="#/contact"
            id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
           className="sc-fznxsB cYgHSw aos-init aos-animate mr-6"
           style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>Contact</button></a>
-          <a href="https://mbeautehair.glossgenius.com/services"><button href="https://mbeautehair.glossgenius.com/services"
+          <a href="#/services"><button href="#/services"
            id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
           className="sc-fznxsB cYgHSw aos-init aos-animate bg-black min-[600px]:bg-[#eed1e3]" 
           style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'rgb(255, 255, 255)', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>Booking</button></a>
@@ -404,7 +404,7 @@ export default async function Home() {
  <GiftCardSection /> 
 <div className="group bg-theme-2  lg:bg-black relative pt-14 lg:mt-24 slideshow__slide  slick-slide slick-current slick-active " data-slick-index="0" aria-hidden="false"
         style={{width:"100%", position: 'relative', left: '0px', top: '0px',  opacity: 1}} >
-  <div href="https://mbeautehair.glossgenius.com/services" className="slideshow__link flex" tabindex="0">
+  <div href="#/services" className="slideshow__link flex" tabindex="0">
       <img src={massiLG.src} className='h-full w-full max-[700px]:hidden'/>
       <img src={massi.src} className='h-full w-full min-[700px]:hidden'/>
    <FadeInStagger key={'INTRO'}>
@@ -424,7 +424,7 @@ export default async function Home() {
      </div>  */}
      <div >
      <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300">
-        <a className={clsx(" hover:!text-[#f8e8cd]  !border-[wheat] ClassicButton_button__ETGhE transition !text-[#845201] group-hover:!text-[wheat] duration-150 transform btn text-black justify-center bg-[#efc680ba]  !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")} href="https://mbeautehair.glossgenius.com/services">Book Now </a>
+        <a className={clsx(" hover:!text-[#f8e8cd]  !border-[wheat] ClassicButton_button__ETGhE transition !text-[#845201] group-hover:!text-[wheat] duration-150 transform btn text-black justify-center bg-[#efc680ba]  !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")} href="#/services">Book Now </a>
      </div>
      </div> 
   
@@ -435,7 +435,7 @@ export default async function Home() {
   </div>
  
   <div class="px-6 pt-0 md:pt-0  sm:mx-0 sm:pt-5 md:px-12 border-b border-orange-300 bg-[#6420ff] bg-[rgb(137,96,86)]">
-  <a href="https://mbeautehair.glossgenius.com/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full grid-cols-2">
+  <a href="#/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full grid-cols-2">
            <ul className="max-w-4xl lg:max-w-none flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
               <li>
                 <span className="inline-block w-full py-2 px-3">

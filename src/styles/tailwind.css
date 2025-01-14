@@ -413,7 +413,7 @@ main h2 {
     max-width: 1200px;
     margin: 0 auto;
 }
-@media only screen and (max-width: 991px){
+/* @media only screen and (max-width: 991px){
 .section-header {
     padding: 0 20px;
 }}
@@ -424,7 +424,34 @@ main h2 {
 .section-header {
     position: relative;
     margin-bottom: 18px;
-}
+} */
+
+@media only screen and (max-width: 991px) {
+    /* .section-header {
+      margin-top: 30%;
+      padding: 0 20px;
+      text-align: center;
+    } */
+  }
+  
+  /* @media only screen and (min-width: 992px) {
+    .section-header {
+      margin-top: 20%;
+      padding: 0 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+   */
+  .animated-logo {
+    font-family: "Kaushan Script", cursive !important;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0px;
+  }
+  
 .index-section:first-child {
     padding-top: 0;
     border-top: 0;
@@ -557,10 +584,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     z-index: 3;
     padding: 50px 50px 60px;
 }
-@media only screen and (min-width: 768px){
+/* @media only screen and (min-width: 768px){
 .section-header {
     margin-bottom: 36px;
-}}
+}} */
 
 
 
@@ -723,11 +750,11 @@ rs-layer-wrap, rs-mask-wrap, rs-cbg-mask-wrap {
     z-index: 9;
     font-family: "Kaushan Script", cursive !important;
     /* color: rgb(255, 255, 255); */
-    text-decoration: none;
-    white-space: nowrap;
+    /* text-decoration: none;
+    white-space: nowrap; */
     /* width: 86%; */
     /* height: 97px; */
-    min-height: 0px;
+    /* min-height: 0px;
     min-width: 0px;
     max-height: none;
     max-width: none;
@@ -738,7 +765,7 @@ rs-layer-wrap, rs-mask-wrap, rs-cbg-mask-wrap {
     border-color: rgb(229, 231, 235);
     border-style: solid;
     transform-origin: 50% 50%;
-    opacity: 1;
+    opacity: 1; */
     /* transform: rotate(352deg); */
     visibility: visible;
 }

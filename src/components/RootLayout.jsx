@@ -71,7 +71,7 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="https://mbeautehair.glossgenius.com/contact" invert={invert}>
+          <Button href="#/contact" invert={invert}>
             Contact us
           </Button>
           <button
@@ -172,7 +172,7 @@ function RootLayoutInner({ className, children }) {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-         className={`absolute left-0 right-0 top-0 z-40 pt-3 px-4 text-center bg-[#ed209f]  border-t border-[#eed1e3]`} 
+         className={`absolute left-0 right-0 top-0 z-40 pt-3 px-4 text-center bg-black hover:border-b border-pink-400 hover:bg-[#ed209f]  border-t border-[#eed1e3]`} 
           aria-hidden={expanded ? 'true' : undefined}
           inert={expanded ? '' : undefined}
         >

@@ -11,8 +11,8 @@ const navigation = [
   {
     title: 'WORK',
     links: [
-      { title: 'Porfolio', href: 'https://mbeautehair.glossgenius.com/portfolio' },
-      { title: 'Services', href: 'https://mbeautehair.glossgenius.com/services' },
+      { title: 'Porfolio', href: '#/portfolio' },
+      { title: 'Services', href: '#/services' },
      
       {
         title: (
@@ -20,16 +20,16 @@ const navigation = [
             See all <span aria-hidden="true">&rarr;</span>
           </>
         ),
-        href: 'https://mbeautehair.glossgenius.com/services',
+        href: '#/services',
       },
     ],
   },
   {
     title: 'MBEAUTENOIR',
     links: [
-      { title: 'About', href: 'https://mbeautehair.glossgenius.com/about' },
+      { title: 'About', href: '#/about' },
    
-      { title: 'Contact', href: 'https://mbeautehair.glossgenius.com/contact' }, 
+      { title: 'Contact', href: '#/contact' }, 
         { title: 'Shop With Us', href: '/process' },
     ],
   },

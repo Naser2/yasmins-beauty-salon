@@ -28,7 +28,12 @@ const contactDetails = [
   {
     icon: <ExclamationCircleIcon />, // Exclamation icon
     title: "Policy",
-    content: "NO HAIR PROVIDED FOR BOHO\n*CASH ONLY & No Refunds*",
+    content: "NO HAIR PROVIDED FOR BOHO | CASH ONLY",
+  },
+  {
+    icon: <ExclamationCircleIcon />, // Exclamation icon
+    title: "Policy",
+    content: "NO REFUNDDS after scheduling & payments*",
   },
 ];
 
