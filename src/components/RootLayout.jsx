@@ -173,78 +173,29 @@ function RootLayoutInner({ className, children }) {
       <header>
         <div
          className={`absolute left-0 right-0 top-0 z-40 pt-3 px-4 text-center bg-[#ed209f]  border-t border-[#eed1e3]`} 
-          // className={`absolute left-0 right-0 top-2 z-40 pt-6 ${mainBackground}`} 
-          // style={{background: '#8dc2f67a', background: 'rgb(2 4 5)'}}
           aria-hidden={expanded ? 'true' : undefined}
           inert={expanded ? '' : undefined}
         >
+       
           <a href="#"><h4 className="text-white ">
            Welcome to Yasmins</h4></a>
          
-          {/* <Header
-            panelId={panelId}
-            icon={MenuIcon}
-            toggleRef={openRef}
-            expanded={expanded}
-            onToggle={() => {
-              setExpanded((expanded) => !expanded)
-              window.setTimeout(() =>
-                closeRef.current?.focus({ preventScroll: true })
-              )
-            }}
-          /> */}
+
         </div>
-        <div class="mt-[2.5rem] z-30 bg-[#eed1e3] w relative pt-2  pb-2 px-4 lg:px-20 bg-white" bandcolor="main-bg-yellow"><button class="button-news button-grand" data-analytics-exit-link="" data-url="blogs://nasdesign.com/blogs?campaign_id=band_campaign" aria-label="A list of great blogs to read"><span className='text-sm md:text-lg lg:text-lg mr-4'><a href="https://mbeautehair.glossgenius.com/services">Services</a> </span> <span className='text-sm md:text-lg lg:text-lg mr-4'><a href="https://mbeautehair.glossgenius.com/contact"></a>Contact </span><span className='text-sm md:text-lg lg:text-lg mr-4'><a href="https://mbeautehair.glossgenius.com/about"></a> About </span></button></div>
-    
-        {/* <motion.div
-          layout
-          id={panelId}
-          style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-[neutral-950] pt-2"
-          aria-hidden={expanded ? undefined : 'true'}
-          inert={expanded ? undefined : ''}
-        >
-          <motion.div layout className="bg-neutral-800">
-        
-            <div ref={navRef} className="bg-[#0d79d8] pb-16 pt-14">
-              <Header
-                invert
-                panelId={panelId}
-                icon={XIcon}
-                toggleRef={closeRef}
-                expanded={expanded}
-                onToggle={() => {
-                  setExpanded((expanded) => !expanded)
-                  window.setTimeout(() =>
-                    openRef.current?.focus({ preventScroll: true })
-                  )
-                }}
-              />
+        <div class="mt-[2.5rem] z-30 bg-[#eed1e3] w relative pt-2 pb-2 px-4 lg:px-20 bg-white" bandcolor="main-bg-yellow">
+          <div class="flex items-center justify-between mr-4">
+
+            <a href="#" role="link" class="mr-4">
+              <img src="/cropped-YasminBeautyShop.png" class="max-w-[33vw] sm:!max-h-[4rem] lg:!max-h-[5.5rem] " width="356" height="67" alt="YasminBeauty Hair Salon Logo" id="logo" data-height-percentage="54" data-actual-width="356" data-actual-height="67" />
+            </a>
+
+            <div class="flex space-x-4">
+              <span class='text-sm md:text-lg lg:text-lg'><a href="#SERVICES">Services</a></span>
+              <span class='text-sm md:text-lg lg:text-lg'><a href="#CONTACT">Contact</a></span>
+              <span class='text-sm md:text-lg lg:text-lg'><a href="#ABOUT">About</a></span>
             </div>
-            <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
-              <Container>
-                <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div>
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
-                    </h2>
-                    <Offices
-                      invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-                    />
-                  </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Follow us
-                    </h2>
-                    <SocialMedia className="mt-6" invert />
-                  </div>
-                </div>
-              </Container>
-            </div>
-          </motion.div>
-        </motion.div> */}
+          </div>
+        </div>
       </header>
 
       <motion.div
@@ -256,17 +207,9 @@ function RootLayoutInner({ className, children }) {
           layout
           className="relative isolate flex w-full flex-col"
         >
-          {/* <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
-            yOffset={-96}
-            interactive
-          /> */}
-
+        
           <main className={clsx(className, "w-full flex-auto")}>
-            {/* <div class="w-[108rem] flex-none flex justify-end absolute top-0" style={{backgroundImage: 'linear-gradient(197deg,white,#fdfdfd,#c8d9e700,#fdfdfd00)'}}><picture>
-            <source srcset="https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif" type="image/avif"/>
-            <img src="https://tailwindcss.com/_next/static/media/docs@30.8b9a76a2.avif" alt="" class="w-[90rem] flex-none max-w-none hidden dark:block" decoding="async"/></picture>
-          </div> */}
+          
           {children}
           </main>
 

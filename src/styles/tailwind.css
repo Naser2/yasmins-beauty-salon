@@ -566,7 +566,20 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 /* GIFT CARDS  */
 
-
+#logo {
+    max-height: 30% !important;
+}
+#logo {
+    width: auto;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    margin-bottom: 0;
+    max-height: 54%;
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+}
 .details-gallery__image-wrapper {
     display: flex;
     align-items: center;
