@@ -62,22 +62,29 @@ const NewContactSection = () => {
                </div>  
            </FadeIn>
    
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {contactDetails.map((item, index) => (
-        <FadeIn id={item.id}>
-          <div id={item.id}
-            key={index}
-            className="group hover:bg-[#c3a5ba] group-hover:border-1 group-hover:border-pink-400 group-hover:!text-white flex items-start bg-gray-100/20 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-          >
-            <div className="...text-[#eed1e3] text-slate-600  group-hover:!text-white  ...group-hover:text-pink-500 h-5 mr-4">{item.icon}</div>
-            <div>
-              <h3 className="text-xlg..text-[#eed1e3]  group-hover:!text-white  ..group-hover:text-pink-500 font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-700 whitespace-pre-line  group-hover:!text-white">{item.content}</p>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {contactDetails.map((item) => (
+                <FadeIn key={item.id}>
+                  <div
+                    id={item.id}
+                    className="group hover:bg-[#c3a5ba] group-hover:border-1 group-hover:border-pink-400 group-hover:!text-white flex items-start bg-gray-100/20 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <div className="text-[#eed1e3] text-slate-600 group-hover:!text-white group-hover:text-pink-500 h-5 mr-4">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xlg text-[#eed1e3] group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-700 whitespace-pre-line group-hover:!text-white">
+                        {item.content}
+                      </p>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
             </div>
-          </div>
-         </FadeIn> 
-        ))}
-      </div>
+
       </FadeInStagger>
     </div>
   );
