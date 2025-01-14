@@ -45,8 +45,6 @@ const NewContactSection = () => {
         Reach out to Yasmin Beauty Shop for all your beauty needs. Our friendly team is here to assist you.
         Whether you have a specific inquiry or would like to schedule an appointment, we&apos;re happy to help.
       </p>
-
-
         <FadeInStagger key={'CONTACT'}>
         <FadeIn>
            <div id="COLLECTION" className="relative shopify-section index-section  overflow-hidden">
@@ -61,7 +59,6 @@ const NewContactSection = () => {
                  </div>
                </div>  
            </FadeIn>
-   
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactDetails.map((item) => (
                 <FadeIn key={item.id}>
