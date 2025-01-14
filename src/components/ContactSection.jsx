@@ -47,7 +47,7 @@ const NewContactSection = () => {
       </p>
 
 
-        <FadeInStagger key={'New Collection'}>
+        <FadeInStagger key={'CONTACT'}>
         <FadeIn>
            <div id="COLLECTION" className="relative shopify-section index-section  overflow-hidden">
                <div className="page-width pt-4 sm:pt-12" id="1a23616c-8a74-41e2-a062-803892398db5"> 
@@ -64,8 +64,8 @@ const NewContactSection = () => {
    
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {contactDetails.map((item, index) => (
-        <FadeIn>
-            <div id={item.id}
+        <FadeIn id={item.id}>
+          <div id={item.id}
             key={index}
             className="group hover:bg-[#c3a5ba] group-hover:border-1 group-hover:border-pink-400 group-hover:!text-white flex items-start bg-gray-100/20 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
           >
