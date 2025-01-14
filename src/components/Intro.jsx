@@ -43,7 +43,7 @@ export default function Intro() {
           <div className={`${logoPositionChange} max-w-[90vw] section-header mx-auto mt-[30%] lg:mt-[20%]`}>
             <div className="text-white space-y-3  md:space-y-12">
               <h2 className={clsx(logoColorChange, "animated-logo")}>
-                YASMIN'S <br className="hidden xl:block" /> BEAUTY
+                YASMIN&apot;S <br className="hidden xl:block" /> BEAUTY
               </h2>
               <h2 className={clsx(logoColorChange, "mt-4")}>SALON</h2>
             </div>
