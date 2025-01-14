@@ -14,7 +14,9 @@ export default function Intro()  {
       setTimeout(() => {setLogoColorChange("!transition  !duration-150 !transform delay-150  !text-[wheat] !text-5xl  md:text-[6em]  lg:!text-[7em] xl:!text-[9em] !max-w-3xl xl:!max-w-4xl !font-bold !signature-font !font-bold  animated-logo md:pb-0")}, 2030)
     }, [logoColorChange])
     useEffect(() => {
-      setTimeout(() => {setLogoPositionChange('md:!max-[900px]:mt-[7.9%] min-[900px]:mt-[8.9%]  transition transform duration-150 ease-in-out fadeUp smooth !max-w-4xl')}, 2900)
+    
+      setTimeout(() => {setLogoPositionChange(' left-10 top-[50%] sm:top-[37%] lg:top-[15%] lg:left-[-120px]  xl:top-[5%] xl:left-[-160px] ')}, 2900)
+      // setTimeout(() => {setLogoPositionChange('md:!max-[900px]:mt-[7.9%] min-[900px]:mt-[8.9%]  transition transform duration-150 ease-in-out fadeUp smooth !max-w-4xl')}, 2900)
     }, [logoPositionChange])
     useEffect(() => {
       setTimeout(() => {setBookNowColorChange("bg-black rounded-xl  !text-[#f8e8cd]  !border-[wheat]")}, 3100)
@@ -29,14 +31,14 @@ export default function Intro()  {
       setTimeout(() => {setBookNowColorChange("transition  !rounded-none  duration-150 transform bg-black !text-[wheat]  !text-[#e9a72c]")}, 4900)
     }, [bookNowColorChange])
 
-    return <div className='absolute top-[50%] inset-x-0'>
+    return <div className='absolute top-[50%] sm:top-[37%] xl:top-[50%]inset-x-0'>
     <FadeInStagger key={'INTRO'}>
     <FadeIn>
     <div className={`${logoPositionChange} max-w-[90vw] xl:mr-[27vw]  section-header content-center  transition duration-150 transform home text-center wow fadeIn text-white max-w-3xl justify-centr mx-auto rs-parallax-wrap`}  style={{visibility:"visible", animationName:"fadeIn"}}>
-    <div className="lg:min-h-[100px] rs-parallax-wrap mb-4 inset-x-0 xl:!pb-24 "  style={{position: 'absolute' , display: 'block' ,'pointer-events': 'auto', 'z-index': 9, visibility: 'visible', perspective: '601px'}}>
+    <div className="!text-[30px] lg:min-h-[100px] rs-parallax-wrap mb-4 inset-x-0 xl:!pb-24 space-y-12"  style={{position: 'absolute' , display: 'block' ,'pointer-events': 'auto', 'z-index': 9, visibility: 'visible', perspective: '601px'}}>
      <h2 className={clsx(logoColorChange ? logoColorChange : 'rounded-xl','animation  inline-flex text-pink text-3xl  lg:text-pink  md:text-[5em]  lg:text-[6em] xl:!text-[8em]  signature-font  animated-logo lg:pb-6 ')}
      >
-       YASMINS MBEAUTY
+       YASMINS <br className="max-xl:hidden"/> MBEAUTY<div className="mt-12"></div>
       </h2>
       <br/>
       <h2 className={clsx(logoColorChange ? logoColorChange : 'mt-4 rounded-xl','animation  inline-flex text-pink text-3xl  lg:text-pink  md:text-[5em]  lg:text-[6em] xl:!text-[8em]  signature-font  animated-logo pb-12')} >

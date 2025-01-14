@@ -7,8 +7,10 @@ import Footer from '@/components/Footer'
 
 export const metadata = {
   title: {
+    title: 'Yasmines Beauty Salon & Haircare NJ',
+    description:"Yasmines Beauty Salon NJ",
     template: 'Yasmines Beauty Salon NJ',
-    default: 'Beauty Salon and Haircare specialist located in New Jesrsey. #NJ #haircare #beautysalon #newjerseybeautysalon.',
+    default: 'Yasmines Beauty Salon and Haircare specialist located in New Jesrsey. 1 N Harrison St, East Orange, NJ #NJ #haircare #beautysalon #newjerseybeautysalon.',
   },
 }
 // const fancyfont = Sugela({src:'../../public/fonts/sugelasugela-gowdq.ttf'})

@@ -208,10 +208,10 @@ function  Footer(){
                   </div> 
               </li>
           </ul> 
-          <div class="container py-10 lg:p-0 w-full lg:w-4/12 bg-apricot lg:bg-crema">
-              <form class="flex flex-col text-lg newsletter-form">
+          <div class="container py-10 lg:p-0 w-full lg:w-4/12 bg-apricot lg:bg-pink-100/70 lg:rounded-lg">
+              <form class="flex flex-col text-lg newsletter-form text-white/90 lg:p-4">
                   <div class="mb-10 serializer">
-                      <span><p><strong>10% OFF YOUR FIRST ORDER </strong>— Signup for the latest product news, first-person essays, and expert skin tips.</p></span> 
+                      <span><p><strong>10% OFF YOUR FIRST VISIT </strong>— Signup for the latest offers, news, first-person essays, and expert hair tips.</p></span> 
                   </div>   
                   <div class="relative pb-2 md:w-1/2 lg:w-full flex items-center border-b border-ochre val-w-email">
                       <input class="w-full bg-transparent outline-none uppercase font-sans placeholder-ochre text-white text-ochre" type="text" placeholder="ENTER YOUR EMAIL" data-index="0"/> 
@@ -242,7 +242,8 @@ function  Footer(){
                   <a data-acsb-custom-trigger="true" class="cursor-pointer">Accessibility</a>
               </li> 
               <li>
-                  <div class="site-cta cursor-pointer select-none">By NasStudios.co</div>
+              <div class="site-cta text-sm  cursor-pointer select-none lg:hidden">By Nas</div>
+                  <div class="site-cta text-sm  cursor-pointer select-none max-lg:hidden">By NasStudios.co</div>
               </li>
           </ul>
       </div>

@@ -330,8 +330,11 @@ function Services() {
 }
 
 export const metadata = {
+  title: 'Yasmines Beauty Salon & Haircare NJ',
+  description:"Yasmines Beauty Salon NJ",
+  template: 'Yasmines Beauty Salon NJ',
   description:
-    'Mbeautenoir is an NYC haircare specialist located in Harlem. Our goal is to promote clean beauty.',
+    'Yasmines Beauty Salon and Haircare specialist located in New Jesrsey. 1 N Harrison St, East Orange, NJ #NJ #haircare #beautysalon #newjerseybeautysalon.',
 }
 
 export default async function Home() {
@@ -346,7 +349,7 @@ export default async function Home() {
      
      <div className='page-container drawer-page-content massi'>
        <div className='main-content'>
-         <div className="relative sm:-mt-38 lg:-mt-[5%] slideshow__slide  slick-slide slick-current slick-active index-section " data-slick-index="0" aria-hidden="false"
+         <div className="relative sm:-mt-38 lg:-mt-[0%] slideshow__slide  slick-slide slick-current slick-active index-section " data-slick-index="0" aria-hidden="false"
          style={{width:"100%", position: 'relative', left: '0px', top: '0px', 'z-index':'999', opacity: 1}} 
          >
            <a href="#COLLECTION" className="slideshow__link" tabindex="0">
@@ -503,8 +506,8 @@ export default async function Home() {
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 =
- <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
+    <Testimonial
+        className="..lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
         The team at MbeauteNoir are the best in NY........
