@@ -192,7 +192,7 @@ function RootLayoutInner({ className, children }) {
             <div class="flex space-x-4">
               <span class='text-sm md:text-lg lg:text-lg'><a href="#SERVICES">Services</a></span>
               <span class='text-sm md:text-lg lg:text-lg'><a href="#CONTACT">Contact</a></span>
-              <span class='text-sm md:text-lg lg:text-lg'><a href="#ABOUT">About</a></span>
+              <span class='text-sm md:text-lg lg:text-lg'><a href="#COLLECTION">Collection</a></span>
             </div>
           </div>
         </div>

@@ -347,7 +347,7 @@ export default async function Home() {
         <FadeIn className="max-w-7x">
         <>
      
-     <div className='page-container drawer-page-content massi'>
+     <div className='page-container drawer-page-content massi' >
        <div className='main-content'>
          <div className="relative sm:-mt-38 lg:-mt-[0%] slideshow__slide  slick-slide slick-current slick-active index-section " data-slick-index="0" aria-hidden="false"
          style={{width:"100%", position: 'relative', left: '0px', top: '0px', 'z-index':'999', opacity: 1}} 
@@ -358,12 +358,12 @@ export default async function Home() {
            {/* <img src={massiLG.src} className='h-full w-full max-[700px]:hidden'/>
            <img src={massi.src} className='h-full w-full min-[700px]:hidden'/> */}
            </a> 
-        <Intro />
+         <Intro />
          </div>
  
         <FadeInStagger key={'New Collection'}>
          <FadeIn>
-           <div id="shopify-section-1a23616c-8a74-41e2-a062-803892398db5" className="relative shopify-section index-section  overflow-hidden">
+           <div id="COLLECTION" className="relative shopify-section index-section  overflow-hidden">
                <div className="page-width pt-4 sm:pt-12" id="1a23616c-8a74-41e2-a062-803892398db5"> 
                  <div className="section-header home text-center wow fadeIn" style={{visibility: 'visible', animationName:'fadeIn'}}>
                    <h2>NEW COLLECTION</h2>      
@@ -394,7 +394,7 @@ export default async function Home() {
      
          <FadeInStagger key={'Book Now 2'}>
          <FadeIn>
-      <div id="quiz-kit-question-image" className="sc-fzpdbB gZFNLC md:bottom-[-79%] mx-auto max-w-12xl  lg:px-8 ">
+      <div  className="h-[fit-content] sc-fzpdbB gZFNLC md:bottom-[-79%] mx-auto max-w-12xl  lg:px-8" id="SERVICES">
        <div id="quiz-kit-container"
              className="sc-AxirZ jddkUx center-center bg-yasmin-main  opacity-0.5">
           <h1 id="quiz-kit-intro-title" 
@@ -403,15 +403,15 @@ export default async function Home() {
               NEED A SERVICE?</h1>
             <p id="quiz-kit-intro-text" font-size="16" font-family="Questrial"  font-weight="400" letter-spacing="0" data-aos="fade-up" data-aos-delay="150"
               className="sc-AxhCb bosNnv aos-init aos-animate   -mt-4"  >
-                  Review my catalogue, and explore an array of services. 
+                  Review our catalogue, and explore an array of services. 
             </p >
                   <div className="gap-x-6  md:gap-x-24 sm:space-x-4 ">
-                  <a href="#/contact"><button href="#/contact"
+                  <a href="#LOCATION"><button href="#/contact"
                       id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
                       className="sc-fznxsB cYgHSw aos-init aos-animate mr-6"
                       style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
-                        Contact</button></a>
-                <a href="#/services"><button href="#/services"
+                        Address</button></a>
+                <a href="#CALL"><button href="#/services"
                       id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
                       className="sc-fznxsB cYgHSw aos-init aos-animate bg-black  text-white hover:bg-pink-400 hover:text-white" 
                       style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
@@ -434,7 +434,10 @@ export default async function Home() {
        <BestSellers />
  
   <GiftCardSection /> 
-  <NewContactSection/>
+  <div id="CONTACT">
+      <NewContactSection/>
+  </div>
+
   {/* <ContactSection /> */}
  <div className="group bg-theme-2  lg:bg-black relative mt-12  lg:mt-24 slideshow__slide  slick-slide slick-current slick-active " data-slick-index="0" aria-hidden="false"
  style={{width:"100%", position: 'relative', left: '0px', top: '0px',  opacity: 1}} 

@@ -1,36 +1,36 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Location, Offices } from '@/components/Offices'
 import { PhoneIcon, MapIcon, LockOpenIcon, CalendarIcon, ExclamationCircleIcon  } from '@heroicons/react/24/solid'
 
 const contactDetails = [
-  {
+  { id:"CALL",
     icon: <PhoneIcon />, // Phone icon
     title: "Phone",
     content: "862-252-6325 | 973-395-3900",
   },
-  {
+  { id:"LOCATION",
     icon: <MapIcon />, // Map pin icon
     title: "Address",
     content: "11 N Harrison St, East Orange, NJ",
   },
-  {
+  { id:"HOURS",
     icon: <LockOpenIcon />, // Clock icon
     title: "Hours",
     content: "Open Daily: 4:00 a.m. - 5:00 p.m.",
   },
-  {
+  { id:"APOINTMENTS",
     icon: <CalendarIcon />, // Calendar icon
     title: "Appointments",
     content: "No appointment, WALK-INS ONLY",
   },
-  {
+  {  id:"POLICY",
     icon: <ExclamationCircleIcon />, // Exclamation icon
     title: "Policy",
     content: "NO HAIR PROVIDED FOR BOHO | CASH ONLY",
   },
-  {
+  { id:"POLICYN",
     icon: <ExclamationCircleIcon />, // Exclamation icon
     title: "Policy",
     content: "NO REFUNDDS after scheduling & payments*",
@@ -46,9 +46,26 @@ const NewContactSection = () => {
         Whether you have a specific inquiry or would like to schedule an appointment, we&apos;re happy to help.
       </p>
 
+
+        <FadeInStagger key={'New Collection'}>
+        <FadeIn>
+           <div id="COLLECTION" className="relative shopify-section index-section  overflow-hidden">
+               <div className="page-width pt-4 sm:pt-12" id="1a23616c-8a74-41e2-a062-803892398db5"> 
+                 <div className="section-header home text-center wow fadeIn" style={{visibility: 'visible', animationName:'fadeIn'}}>
+                   <h2>NEW COLLECTION</h2>      
+                       <p> CUSTOM WIGS | PRE-SELECTED STYLES &amp; COLOR</p>        
+                 </div>
+                   <div id="products-1a23616c-8a74-41e2-a062-803892398db5" className="grid-products">
+                   {/* <Team /> */}
+                   </div>
+                 </div>
+               </div>  
+           </FadeIn>
+   
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {contactDetails.map((item, index) => (
-          <div
+        <FadeIn>
+            <div id={item.id}
             key={index}
             className="group hover:bg-[#c3a5ba] group-hover:border-1 group-hover:border-pink-400 group-hover:!text-white flex items-start bg-gray-100/20 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
           >
@@ -58,8 +75,10 @@ const NewContactSection = () => {
               <p className="text-gray-700 whitespace-pre-line  group-hover:!text-white">{item.content}</p>
             </div>
           </div>
+         </FadeIn> 
         ))}
       </div>
+      </FadeInStagger>
     </div>
   );
 };
@@ -68,7 +87,7 @@ export default NewContactSection;
 
 function ContactSection() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
+    <Container className="mt-24 sm:mt-32 lg:mt-40" id="CONTACT"> 
       <FadeIn className="-mx-6 lg:rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
