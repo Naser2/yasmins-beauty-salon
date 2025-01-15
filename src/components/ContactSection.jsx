@@ -51,7 +51,7 @@ const NewContactSection = () => {
                <div className="page-width pt-4 sm:pt-12" id="1a23616c-8a74-41e2-a062-803892398db5"> 
                  <div className="section-header home text-center wow fadeIn" style={{visibility: 'visible', animationName:'fadeIn'}}>
                    <h2>NEW COLLECTION</h2>      
-                       <p> CUSTOM WIGS | PRE-SELECTED STYLES &amp; COLOR</p>        
+                       <p className='text-[#073e38]'> CUSTOM WIGS | PRE-SELECTED STYLES &amp; COLOR</p>        
                  </div>
                    <div id="products-1a23616c-8a74-41e2-a062-803892398db5" className="grid-products">
                    {/* <Team /> */}
@@ -61,16 +61,16 @@ const NewContactSection = () => {
            </FadeIn>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactDetails.map((item) => (
-                <FadeIn key={item.id}>
+                <FadeIn key={item.id} className="group">
                   <div
                     id={item.id}
-                    className="group hover:bg-[#c3a5ba] group-hover:border-1 group-hover:border-pink-400 group-hover:!text-white flex items-start bg-gray-100/20 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                    className="hover:bg-[#c3a5ba] group-hover:border group-hover:border-[#093834de] group-hover:!text-white flex items-start bg-gray-100/20 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                   >
-                    <div className="text-[#eed1e3] text-slate-600 group-hover:!text-white group-hover:text-pink-500 h-5 mr-4">
+                    <div className="max-w-[20%] border rounded-full p-1 text-[#eed1e3] text-slate-600 group-hover:!text-white group-hover:text-pink-500 h-5 mr-4">
                       {item.icon}
                     </div>
                     <div>
-                      <h3 className="text-xlg .text-[#eed1e3] group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2">
+                      <h3 className="text-xlg text-[#073e38] group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2 ">
                         {item.title}
                       </h3>
                       <p className="text-gray-700 whitespace-pre-line group-hover:!text-white">
@@ -138,7 +138,7 @@ function ContactSection() {
 export function GiftCardSection() {
   return (
     <div className="mx-auto mt-14 sm:mt-32 lg:mt-20 mx-auto max-w-7xl px-6 lg:px-8">
-      <h2 class="text-center mb-12 font-display text-2xl font-semibold text-neutral-950">Treat or suprise a friend.</h2>
+      <h2 class="text-center mb-12 font-display text-2xl font-semibold text-neutral-950">Suprise a friend with a gift card.</h2>
       <FadeIn className="-mx-6">
         <div className="mx-auto max-w-4xl">
           <div className="lg:rounded-4xl overflow-hidden">

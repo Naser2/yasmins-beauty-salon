@@ -244,7 +244,7 @@ function RootLayoutInner({ className, children }) {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-         className={`absolute left-0 right-0 top-0 z-40 pt-3 px-4 text-center bg-[#021c1a] hover:border-b border-pink-400 hover:bg-[#ed209f]  border-t border-[#eed1e3]`} 
+         className={`absolute left-0 right-0 top-0 z-40 pt-3 px-4 text-center bg-[#021c1a] hover:border-b border-pink-400 hover:bg-[#093834de]  border-t border-[#eed1e3]`} 
           aria-hidden={expanded ? 'true' : undefined}
           inert={expanded ? '' : undefined}>
           <a href="#"><h4 className="text-white ">
@@ -260,8 +260,8 @@ function RootLayoutInner({ className, children }) {
             <div class="flex space-x-4">     
             <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/">Home</Link></span>
              <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/about">About</Link></span>
-              <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><a href="/#SERVICES">Services</a></span>
-              <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><a href="/#CONTACT">Contact</a></span>
+              <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/#SERVICES">Services</Link></span>
+              <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/#CONTACT">Contact</Link></span>
         
               {/* <Navigation /> */}
               {/* NAVIGATION HERE */}

@@ -6,13 +6,15 @@ import { FadeIn } from '@/components/FadeIn'
 import { GridPattern } from '@/components/GridPattern'
 
 export function Testimonial({ children, client, className }) {
+
   return (
     <div
       className={clsx(
-        'relative isolate bg-neutral-50 py-16 sm:py-0 md:py-32 -mt-2',
+        'relative isolate bg-neutral-50 py-16 sm:py-0 md:py-32 -mt-2 overflow-hidden' ,
         className
       )}
     >
+      
       <GridPattern
         className="absolute inset-0 -z-10 h-full w-full  fill-[#654da22b] stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_50%,transparent_60%)]"
         yOffset={-256}

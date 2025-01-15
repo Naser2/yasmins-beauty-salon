@@ -1,6 +1,7 @@
 "use client";
 
 import clsx from "clsx";
+import Link from "next/link";
 import { useEffect, useState } from "react"
 
 const { FadeInStagger, FadeIn } = require("./FadeIn")
@@ -75,15 +76,15 @@ export default function Intro() {
               </p>
             </div>
             <div className="mt-0 sm:mt-5  flex justify-center">
-              <a
+              <Link
                 className={clsx(
                   bookNowColorChange,
-                  "px-6 py-3 transition transform hover:-translate-y-1 hover:scale-110 hover:!text-[#f8e8cd] rounded-xl !border-[wheat] px-6 py-4  transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-black hover:!border-[wheat] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360"
+                  "px-6 py-3 z-40 transition transform hover:-translate-y-1 hover:scale-110 hover:!text-[#f8e8cd] rounded-xl !border-[wheat] px-6 py-4  transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-black hover:!border-[wheat] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360"
                 )}
-                href="#/services"
+                 href="#CALL"
               >
                 Book Now
-              </a>
+              </Link>
             </div>
      <footer className="mt-[7em]  sm:mt-[8em] w-full bardrop-blur ">
         <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-[4rem] pt-20 sm:pb-6 lg:px-8 absolute inset-x-0 sm:right-0 bottom-[-5vh] sm:bottom-[-2vh] md:bottom-[4vh] lg:bottom-[2vh] xl:bottom-[3vh] lg:!left-[-567px] xl:!left-[-667px]">

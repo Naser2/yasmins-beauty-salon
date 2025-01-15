@@ -423,9 +423,30 @@ export default async function Home() {
   <div id="CONTACT">
       <NewContactSection/>
   </div>
+  <div className="max-w-4xl mx-auto p-6 my-8">
+
+<h3 class="text-xlg text-[#073e38] group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2 -mt-6  sm:text-center ">Location</h3>
+  <div id="MAP" class="sm:mx-auto max-w-2xl rounded-4xl">
+        <div class="lg:rounded-4xl overflow-hidden">
+          <div class="lg:p-[0.3rem] rounded-2xl  overflow hover:border hover:border-gray-100 lg:border-gray-200 ">
+          <img src={'/yasmins_location_img.png'} 
+          className='h-full w-full rounded-2xl'/>
+        </div>
+        </div>
+        
+    </div>
+
+  </div>
+  <div className="max-w-4xl mx-auto p-6 my-8">
+    <h2 className='py-6'>Testimonials  </h2>
+     <Testimonial className="..lg:mt-40"
+        client={{ name: 'Phobia', logo: '/cropped-YasminBeautyShop.png'}}>
+        Testimonials Coming Soon
+      </Testimonial> 
+   </div>
 
   {/* <ContactSection /> */}
- <div className="group bg-theme-2  lg:bg-black relative mt-12  lg:mt-24 slideshow__slide  slick-slide slick-current slick-active border-t  border-[#03302c] " data-slick-index="0" aria-hidden="false" style={{width:"100%", position: 'relative', left: '0px', top: '0px',  opacity: 1}} 
+ <div className="group bg-theme-2  lg:bg-black relative lg:mt-12  lg:mt-24 slideshow__slide  slick-slide slick-current slick-active border-t  border-[#03302c] " data-slick-index="0" aria-hidden="false" style={{width:"100%", position: 'relative', left: '0px', top: '0px',  opacity: 1}} 
  >
    <div href="#/services" className="slideshow__link flex " tabindex="0">
        <img src={'yasmin_img_desktop.png'} className='h-full w-full max-[700px]:hidden'/>
@@ -433,23 +454,23 @@ export default async function Home() {
     <FadeInStagger key={'INTRO'}>
      <FadeIn>
        
-     <div className="absolute inset-x-0 lg:inset-x-20 top-[54%] md:top-[50%] lg:top-40%] mx-6 rounded-md py-4  md:py-12 md:px-12 scontent-center !bg-[#ff149321] transition duration-150 transform home text-center wow fadeIn text-white max-w-7xl justify-centr mx-auto rs-parallax-wrap  min-[600px]:mt-[10%]"  style={{visibility:"visible", animationName:"fadeIn"}}>
+     <div className="absolute inset-x-0 lg:inset-x-20 top-[54%] md:top-[45%] lg:top-40%] mx-6 rounded-md py-4  md:py-12 md:px-12 scontent-center !bg-[#ff149305] transition duration-150 transform home text-center wow fadeIn text-white max-w-7xl justify-centr mx-auto rs-parallax-wrap  min-[600px]:mt-[10%]"  style={{visibility:"visible", animationName:"fadeIn"}}>
      <div className="rs-parallax-wrap mb-4 inset-x-0 xl:!pb-24"  style={{position: 'absolute' , display: 'block' ,'pointer-events': 'auto', 'z-index': 9, visibility: 'visible', perspective: '601px'}}>
-      <h2 className={clsx('animation !font-bold  inline-flex text-[wheat] !text-[2.3em]  lg:text-[wheat] md:!text-[5em]  lg:!text-[4em] xl:!text-[6em]  signature-font  animated-logo pb-12')}
+      <h2 className={clsx('animation !font-bold  inline-flex text-[wheat] !text-[2.3em]  lg:text-[wheat] md:!text-[5em]  lg:!text-[4em] xl:!text-[6em]  signature-font  animated-logo pb-5')}
       >
       YASMINS BEAUTY</h2>
       </div> 
       <div className='justify-center lg:text-3xl lg:text-[wheat] max-[700px]:pt-[10%] pt-[12%] xl:pt-[11%]'>
-     <p className={clsx('justify-center text-[1.4em] sm:text-[1.8em] transition duration-250 transform text-sm text-white !text-[#f8e8cd] ')}> Our specialists at your service.</p>
+     <p className={clsx('justify-center text-xl sm:text-[1.8em] transition duration-250 transform text-sm text-white !text-[#f8e8cd] ')}> Our specialists at your service.</p>
       </div> 
       {/* <div className='justify-center max-[700px]:hidden lg:text-3xl lg:text-[wheat] md:max-w-2xl md:px-[20%]  pt-14  lg:pt-24  xl:!mt-24 lg:max-w-4xl lg:px-[10%] xl:max-w-7xl xl:px-[0%] xl:text-center'>
      <p className='transition duration-150 ease-in-out justify-center max-[700px]:hidden lg:text-3xl lg:text-[wheat]'> NYC haircare specialist located in Harlem. Our goal is to promote clean beauty. <span className='max-[700px]:hidden'>Where mindfulness and wellness meet consciousness. Glow inside and out with us! </span> </p>
       </div>  */}
       <div >
       <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300">
-         <a className={clsx(" hover:!text-[#f8e8cd] rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-[#03302c] !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
-          href="#/services"
-          >Book Now </a>
+         <Link className={clsx(" hover:!text-[#f8e8cd] rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-[#03302c] !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
+          href="#CALL"
+          >Book Now </Link>
       </div>
       </div> 
    
@@ -459,32 +480,32 @@ export default async function Home() {
      </FadeInStagger>
    </div>
   
-   <div class="px-6 pt-0 md:pt-0  sm:mx-0 sm:pt-5 md:px-12 border-b border-orange-300 bg-[#272423] ">
-   <a href="#/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full grid-cols-2">
+   <div class="px-6 pt-0 md:pt-0  sm:mx-0 sm:pt-5 md:px-12 border-b hover:border-teal-800 bg-[#272423] ">
+   <div href="#/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full grid-cols-2">
             <ul className="max-w-4xl lg:max-w-none flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
                <li>
                  <span className="inline-block w-full py-2 px-3">
-                   <h3 class="-mb-1 product-details__product-title text-xl  font-semibold !text-white" itemprop="name" style={{"text-transform": 'none !important' }}>Learn More</h3>
+                   <Link href="/about" className="-mb-1 product-details__product-title text-xl  font-semibold !text-white" itemprop="name" style={{"text-transform": 'none !important' }}>Learn More</Link>
                  </span>
                </li>
              </ul>
                <div class="flex justify-end">
-                 <button data-tooltip-target="card-nav-tabs-example-copy-clipboard-tooltip" data-tooltip-placement="bottom" type="button"  className="flex items-center px-3 py-2 text-xs font-medium text-gray-600 hover:text-blue-700">
+                 <Link   href="/about" data-tooltip-target="card-nav-tabs-example-copy-clipboard-tooltip" data-tooltip-placement="bottom" type="button"  className="flex items-center px-3 py-2 text-xs font-medium text-gray-600 hover:text-blue-700">
                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 44 44" width="24" aria-hidden="true" style={{color: 'white'}} class="Navbar_chevronDown__BsZjb rotate-[-85deg]"><path d="M11 9l11 11 11-11"></path></svg>
-                 </button>
+                 </Link>
                </div>
-             </a>  
+             </div>  
          </div>
      </div >
        <div className="max-[700px]:hidden">
-       <PageLinks
+       {/* <PageLinks
          className="!text-left z-[999]"
          title="Contact"
          intro="Please fell free to reach out to us if you have any question."
          pages={blogArticles}
          padding={true}
        
-       />
+       /> */}
      </div>
      </div>
         </FadeIn>
@@ -493,11 +514,8 @@ export default async function Home() {
       {/* <Clients /> */}
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
-=
-    <Testimonial className="..lg:mt-40"
-        client={{ name: 'Phobia', logo: '/cropped-YasminBeautyShop.png'}}>
-        Testimonials Coming Soon
-      </Testimonial> 
+
+  
 
       {/* <Services /> */}
 

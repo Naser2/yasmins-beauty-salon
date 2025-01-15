@@ -1,11 +1,13 @@
-"use client"
+"use client";
 
+import { useEffect, useState } from "react";
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+
 
 const navigation = [
   {
@@ -112,7 +114,89 @@ export function NewsletterForm() {
   )
 }
 
+
+export function EmailForm() {
+  const [userEmail, setUserEmail] = useState(""); // State to hold user email
+  const [emailContent, setEmailContent] = useState(""); // State to hold email content
+  // const [emailAddress, setEmail] = useState(""); // State to hold email content
+
+  // Fetch the user email on mount (replace with your auth system logic)
+  useEffect(() => {
+    // Simulating fetching the user's email
+    const fetchUserEmail = async () => {
+      // Replace with actual logic to get the user's email
+      const fetchedEmail = "";
+      setUserEmail(fetchedEmail);
+    };
+
+    fetchUserEmail();
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log("Sender Email:", userEmail);
+    console.log("Email Content:", emailContent);
+    // alert(`Message sent. Thankk you `);
+    alert(`Message sent: We'll get to you at dc ${userEmail}`);
+  };
+
+  return (
+
+    <form onSubmit={handleSubmit}  className="flex flex-col text-lg newsletter-form text-white/90 lg:p-4">
+        <h2 className="text-2xl font-bold mb-4 text-[#272423]">Contact Us</h2>
+
+    <div class="mb-10 serializer">
+        <span className="group-hover:!text-[#7d5d24]"><p><strong>10% OFF YOUR FIRST VISIT </strong>— Signup for the latest offers, news, first-person essays, and expert hair tips.</p></span> 
+    </div>   
+    <div className="flecx-col space-y-6">
+    <div class="relative pb-2 md:w-1/2 lg:w-full flex items-center border-b border-ochre val-w-email rounded-xl border bg-apricot hover:bg-[#c3a5ba0f] px-4 shadow-sm text-center py-2">
+    <label htmlFor="email" className="block text-sm font-medium text-gray-700 hidden" >
+          Your Email
+        </label>
+                      <input   onChange={(e) => setUserEmail(e.target.value)}
+                      class="w-full bg-transparent outline-none uppercase font-sans placeholder-ochre text-white text-ochre hover:shadow-sm focus:!border-black" 
+                      type="text" placeholder="ENTER YOUR EMAIL" data-index="0"/> 
+                      <div  type="email"    value={userEmail} readOnly
+                      class="absolute right-0 text-ochre font-sans text-xs tracking-plus leading-relaxed">
+                          <span>Incorrect format, please try again.</span>
+                      </div>
+                    
+     </div> 
+     <div class="relative pb-2 md:w-1/2 lg:w-full flex items-center border-b border-ochre val-w-email rounded-xl border bg-apricot hover:bg-[#c3a5ba0f] px-4 shadow-sm text-center py-2">
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700 hidden">
+          Message
+        </label>
+        
+        <textarea id="message"
+        
+         value={emailContent}
+         onChange={(e) => setEmailContent(e.target.value)}
+          className="w-full bg-transparent outline-none uppercase font-sans placeholder-ochre text-white text-ochre hover:shadow-sm focus:!border-black"
+          placeholder="Your message " data-index="0"
+        /> 
+      
+    </div> 
+    </div>
+      
+    <div className="text-right mt-6">
+        <button
+          type="submit"
+          className="px-4 py-2 z-30 !bg-[#272423d1]  ..!bg-[] text-white rounded-md hover:!bg-[#272423]">
+          Send Message
+        </button>
+    </div>
+    
+   
+   
+  
+</form> 
+
+   
+  );
+}
 function  Footer(){
+ 
   return <div id="shopify-section-footer" class="shopify-section">    <footer class="relative flex flex-col overflow-hidden">
   <div class="bg-crema lg:p-smm">
       <div class="flex justify-between flex-col-reverse lg:flex-row">
@@ -129,7 +213,7 @@ function  Footer(){
                       </div> 
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/pages/store-locator" class="inline">Store Finder</a>
+                          <a href="#MAP" class="inline">Salon Finder</a>
                       </div> 
                        
                      
@@ -139,7 +223,7 @@ function  Footer(){
                       </div> 
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/pages/friend" class="inline">Get $10 Off</a>
+                          <a href="/#GIFTCARD" class="inline">Get $10 Off</a>
                       </div> 
                       
                   </div> 
@@ -155,9 +239,9 @@ function  Footer(){
                           <a href="/pages/faq" class="inline">FAQ</a>
                       </div> 
                        
-                      <div class="font-serif mb-1 ">
+                      {/* <div class="font-serif mb-1 ">
                           <a href="/pages/recycling" class="inline">Recycling</a>
-                      </div> 
+                      </div>  */}
                        
                       <div class="font-serif mb-1 ">
                           <a href="/pages/shipping-returns" class="inline">Shipping &amp; Returns</a>
@@ -208,23 +292,10 @@ function  Footer(){
                   </div> 
               </li>
           </ul> 
-          <div class="container py-10 lg:p-0 w-full lg:w-4/12 bg-apricot lg:bg-pink-100/70 lg:rounded-lg">
-              <form class="flex flex-col text-lg newsletter-form text-white/90 lg:p-4">
-                  <div class="mb-10 serializer">
-                      <span><p><strong>10% OFF YOUR FIRST VISIT </strong>— Signup for the latest offers, news, first-person essays, and expert hair tips.</p></span> 
-                  </div>   
-                  <div class="relative pb-2 md:w-1/2 lg:w-full flex items-center border-b border-ochre val-w-email">
-                      <input class="w-full bg-transparent outline-none uppercase font-sans placeholder-ochre text-white text-ochre" type="text" placeholder="ENTER YOUR EMAIL" data-index="0"/> 
-                      <div class="absolute right-0 text-ochre font-sans text-xs tracking-plus leading-relaxed">
-                          <span>Incorrect format, please try again.</span>
-                      </div>
-                      <button type="submit" role="submit" title="submit" class="absolute right-0 w-3 h-3 focus:outline-none">
-                          <svg class="fill-current text-ochre">
-                              <use href="#svg-arrow"></use>
-                          </svg>
-                      </button>  
-                  </div>
-              </form>
+          <div class="container py-10 lg:p-0 w-full lg:w-4/12 bg-apricot hover:bg-[#c3a5ba4a] group lg:bg-pink-100/70 lg:rounded-lg">
+            
+          <EmailForm />
+ 
           </div>  
       </div>
   </div>
