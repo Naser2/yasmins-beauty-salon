@@ -496,7 +496,8 @@ export default async function Home() {
                 client={{ name: 'Phobia', logo: '/cropped-YasminBeautyShop.png'}}>
                 Testimonials Coming Soon
               </Testimonial> 
-        <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-orange-300 bg-[#6420ff] bg-apricot border border-3xl rounded-xl shadow-lg ">
+      <Link   href="/gift">
+        <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-orange-300 bg-[#6420ff] bg-apricot border border-3xl rounded-xl shadow-lg hover:shadow-2xl ">
           <div className="flex justify-between items-center">
             {/* Left-aligned text */}
             <h1 className="product-details__product-title ec-header-h3 font-display text-2xl font-semibold !text-white ">
@@ -532,6 +533,7 @@ export default async function Home() {
             </span>
           </div>
           </div>
+          </Link>
         </div>
 
         <div id="CONTACT">
