@@ -53,10 +53,10 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="absolute inset-x-0 top-[6rem] sm:top-[3%] text-center sm:top-[20%] lg:top-[27%] xl:top-[20%]">
+    <div className="absolute inset-x-0 top-[12rem] sm:top-[3%] text-center sm:top-[20%] lg:top-[27%] xl:top-[20%]">
       <FadeInStagger>
         <FadeIn>
-          <div className={`${logoPositionChange} max-w-[90vw] section-header mx-auto mt-[36%] md:mt-[5%] lg:mt-[15%]`}>
+          <div className={`${logoPositionChange} max-w-[90vw] section-header mx-auto mt-[36%] md:mt-[27%] lg:mt-[15%]`}>
             <div className="text-white space-y-1  md:space-y-5 lg:space-y-5">
               <h2 className={clsx(logoColorChange, ` ${logoFont} text-5xl`)}>
                 YASMIN&apos;S <br className="hidden xl:block" /> BEAUTY
@@ -109,7 +109,7 @@ export default function Intro() {
   
 
 
-const footerNavigation = {
+export const footerNavigation = {
   main: [
     { name: 'About', href: '#' },
     { name: 'Blog', href: '#' },

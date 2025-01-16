@@ -10,7 +10,7 @@ export function Testimonial({ children, client, className }) {
   return (
     <div
       className={clsx(
-        'relative isolate bg-neutral-50 py-16 sm:py-0 md:py-32 -mt-2 overflow-hidden' ,
+        'relative isolate bg-neutral-50 py-16 sm:py-0 md:py-32 -mt-2 overflow-hidden border border-3xl    rounded-3xl mb-12 ' ,
         className
       )}
     >
