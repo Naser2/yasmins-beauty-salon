@@ -311,7 +311,7 @@ function Services() {
             </ListItem>
             <ListItem title="Custom content management">
               At MbeauteNoir we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
+              customised CMS. That&apos;s why we run all of our client projects out
               of a single, enormous Joomla instance.
             </ListItem>
           </List>
@@ -416,13 +416,57 @@ export default async function Home() {
            <div className='text-center mt-32 bg-black border-t border-black min-[700px]:hidden' />
  
  
- 
+           <div class="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]" tabindex="-1"><div class="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 pb-0"><div class="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500"><svg aria-hidden="true" fill="none" focusable="false" height="24" role="presentation" viewBox="0 0 24 24" width="24" class="text-pink-500"><path d="M19.32 10H4.69c-1.48 0-2.68-1.21-2.68-2.68V4.69c0-1.48 1.21-2.68 2.68-2.68h14.63C20.8 2.01 22 3.22 22 4.69v2.63C22 8.79 20.79 10 19.32 10ZM19.32 22H4.69c-1.48 0-2.68-1.21-2.68-2.68v-2.63c0-1.48 1.21-2.68 2.68-2.68h14.63c1.48 0 2.68 1.21 2.68 2.68v2.63c0 1.47-1.21 2.68-2.68 2.68ZM6 5v2M10 5v2M6 17v2M10 17v2M14 6h4M14 18h4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></div><p class="text-base font-semibold">React server components</p></div><div class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"><p class="font-normal text-medium text-default-500">All NextUI components already include the <code class="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap bg-default/40 text-default-700 text-small rounded-small">"use client"</code> directive, which means you can import and use them directly in your RSC.</p></div></div>
        <BestSellers />
- 
-  <GiftCardSection /> 
-  <div id="CONTACT">
-      <NewContactSection/>
+       <div className="max-w-4xl mx-auto p-6 my-8">
+    <h2 className='py-6'>Testimonials  </h2>
+     <Testimonial className="..lg:mt-40"
+        client={{ name: 'Phobia', logo: '/cropped-YasminBeautyShop.png'}}>
+        Testimonials Coming Soon
+      </Testimonial> 
+      <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-orange-300 bg-[#6420ff] bg-apricot">
+  <div className="flex justify-between items-center">
+    {/* Left-aligned text */}
+    <h1 className="product-details__product-title ec-header-h3 font-display text-2xl font-semibold !text-white">
+      Get A Gift Card
+    </h1>
+
+    {/* Right-aligned link */}
+    <span className="flex text-sm mr-4">
+      <Link
+        href="/gift"
+        data-tooltip-target="card-nav-tabs-example-copy-clipboard-tooltip"
+        data-tooltip-placement="bottom"
+        type="button"
+        className="flex items-center px-3 py-2 text-xs font-medium text-gray-600 hover:text-blue-700"
+      >
+        <svg
+          fill="none"
+          height="24"
+          shapeRendering="geometricPrecision"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="3"
+          viewBox="0 0 44 44"
+          width="24"
+          aria-hidden="true"
+          style={{ color: 'white' }}
+          className="Navbar_chevronDown__BsZjb rotate-[-85deg]"
+        >
+          <path d="M11 9l11 11 11-11"></path>
+        </svg>
+      </Link>
+    </span>
   </div>
+</div>
+
+   </div>
+
+  
+      <div id="CONTACT">
+      <NewContactSection/>
+      </div>
   <div className="max-w-4xl mx-auto p-6 my-8">
 
 <h3 class="text-xlg text-[#073e38] group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2 -mt-6  sm:text-center ">Location</h3>
@@ -437,13 +481,6 @@ export default async function Home() {
     </div>
 
   </div>
-  <div className="max-w-4xl mx-auto p-6 my-8">
-    <h2 className='py-6'>Testimonials  </h2>
-     <Testimonial className="..lg:mt-40"
-        client={{ name: 'Phobia', logo: '/cropped-YasminBeautyShop.png'}}>
-        Testimonials Coming Soon
-      </Testimonial> 
-   </div>
 
   {/* <ContactSection /> */}
  <div className="group bg-theme-2  lg:bg-black relative lg:mt-12  lg:mt-24 slideshow__slide  slick-slide slick-current slick-active border-t  border-[#03302c] " data-slick-index="0" aria-hidden="false" style={{width:"100%", position: 'relative', left: '0px', top: '0px',  opacity: 1}} 
@@ -456,8 +493,7 @@ export default async function Home() {
        
      <div className="absolute inset-x-0 lg:inset-x-20 top-[54%] md:top-[45%] lg:top-40%] mx-6 rounded-md py-4  md:py-12 md:px-12 scontent-center !bg-[#ff149305] transition duration-150 transform home text-center wow fadeIn text-white max-w-7xl justify-centr mx-auto rs-parallax-wrap  min-[600px]:mt-[10%]"  style={{visibility:"visible", animationName:"fadeIn"}}>
      <div className="rs-parallax-wrap mb-4 inset-x-0 xl:!pb-24"  style={{position: 'absolute' , display: 'block' ,'pointer-events': 'auto', 'z-index': 9, visibility: 'visible', perspective: '601px'}}>
-      <h2 className={clsx('animation !font-bold  inline-flex text-[wheat] !text-[2.3em]  lg:text-[wheat] md:!text-[5em]  lg:!text-[4em] xl:!text-[6em]  signature-font  animated-logo pb-5')}
-      >
+      <h2 className={clsx('animation !font-bold  inline-flex text-[wheat] !text-[2.3em]  lg:text-[wheat] md:!text-[5em]  lg:!text-[4em] xl:!text-[6em]  signature-font  animated-logo pb-5')}>
       YASMINS BEAUTY</h2>
       </div> 
       <div className='justify-center lg:text-3xl lg:text-[wheat] max-[700px]:pt-[10%] pt-[12%] xl:pt-[11%]'>
@@ -497,6 +533,7 @@ export default async function Home() {
              </div>  
          </div>
      </div >
+        {/* <Services /> */}
        <div className="max-[700px]:hidden">
        {/* <PageLinks
          className="!text-left z-[999]"

@@ -21,11 +21,13 @@ module.exports = {
       borderRadius: {
         '4xl': '2.5rem',   
       },
+
       scrollBehavior: ['smooth'],
-      fontFamily: {
-        sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
+      fontFamily: { 
+        // serif: ['Galliard', 'serif'],
+        sans: ['GOTHICB'],
         display: [
-          ['Mona Sans', ...defaultTheme.fontFamily.sans],
+          ['GOTHICB'],
           { fontVariationSettings: '"wdth" 125' },
         ],
       },

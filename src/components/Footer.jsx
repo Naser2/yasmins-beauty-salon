@@ -144,26 +144,26 @@ export function EmailForm() {
   return (
 
     <form onSubmit={handleSubmit}  className="flex flex-col text-lg newsletter-form text-white/90 lg:p-4">
-        <h2 className="text-2xl font-bold mb-4 text-[#272423]">Contact Us</h2>
+        <h2 className="text-2xl max-lg:!text-white font-bold mb-4 text-[#272423]">Contact Us</h2>
 
     <div class="mb-10 serializer">
-        <span className="group-hover:!text-[#7d5d24]"><p><strong>10% OFF YOUR FIRST VISIT </strong>— Signup for the latest offers, news, first-person essays, and expert hair tips.</p></span> 
+        <span className="lg:group-hover:text-[#7d5d24] max-lg:!text-white "><p><strong>10% OFF YOUR FIRST VISIT </strong>— Signup for the latest offers, news, first-person essays, and expert hair tips.</p></span> 
     </div>   
     <div className="flecx-col space-y-6">
-    <div class="relative pb-2 md:w-1/2 lg:w-full flex items-center border-b border-ochre val-w-email rounded-xl border bg-apricot hover:bg-[#c3a5ba0f] px-4 shadow-sm text-center py-2">
+    <div class="max-lg:!bg-white  relative pb-2 md:w-1/2 lg:w-full flex items-center border-b border-ochre val-w-email rounded-xl border bg-apricot hover:bg-[#c3a5ba0f] px-4 shadow-sm text-center py-2">
     <label htmlFor="email" className="block text-sm font-medium text-gray-700 hidden" >
           Your Email
         </label>
-                      <input   onChange={(e) => setUserEmail(e.target.value)}
-                      class="w-full bg-transparent outline-none uppercase font-sans placeholder-ochre text-white text-ochre hover:shadow-sm focus:!border-black" 
-                      type="text" placeholder="ENTER YOUR EMAIL" data-index="0"/> 
-                      <div  type="email"    value={userEmail} readOnly
-                      class="absolute right-0 text-ochre font-sans text-xs tracking-plus leading-relaxed">
-                          <span>Incorrect format, please try again.</span>
-                      </div>
-                    
+           <input onChange={(e) => setUserEmail(e.target.value)}
+                class="e w-full bg-transparent outline-none uppercase font-sans placeholder-ochre text-white text-ochre hover:shadow-sm focus:!border-black" 
+                type="text" placeholder="ENTER YOUR EMAIL" data-index="0"/> 
+                <div  type="email"    value={userEmail} readOnly
+                class="absolute right-0 text-ochre font-sans text-xs tracking-plus leading-relaxed">
+                    <span>Incorrect format, please try again.</span>
+                </div>
+              
      </div> 
-     <div class="relative pb-2 md:w-1/2 lg:w-full flex items-center border-b border-ochre val-w-email rounded-xl border bg-apricot hover:bg-[#c3a5ba0f] px-4 shadow-sm text-center py-2">
+     <div class="max-lg:!bg-white  relative pb-2 md:w-1/2 lg:w-full flex items-center border-b border-ochre val-w-email rounded-xl border bg-apricot hover:bg-[#c3a5ba0f] px-4 shadow-sm text-center py-2">
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 hidden">
           Message
         </label>
@@ -197,10 +197,11 @@ export function EmailForm() {
 }
 function  Footer(){
  
-  return <div id="shopify-section-footer" class="shopify-section">    <footer class="relative flex flex-col overflow-hidden">
+  return <div id="shopify-section-footer" class="shopify-section">  
+    <footer class="relative flex flex-col overflow-hidden">
   <div class="bg-crema lg:p-smm">
       <div class="flex justify-between flex-col-reverse lg:flex-row">
-          <ul class="container py-10 lg:p-0 w-full lg:w-8/12 flex flex-col lg:grid lg:grid-cols-3 lg:gap-x-5">
+          <ul class="container max-lg:bg-[#000000db]  max-lg:text-white py-10 lg:p-0 w-full lg:w-8/12 flex flex-col lg:grid lg:grid-cols-3 lg:gap-x-5">
               <li class="text-lg footer-tab">
                   <input class="hidden" type="checkbox" id="footer-1" data-index="1"/>
                   <label for="footer-1" class="footer-label block py-4 lg:pt-0 lg:mb-4 text-lg font-sans uppercase">
@@ -292,7 +293,7 @@ function  Footer(){
                   </div> 
               </li>
           </ul> 
-          <div class="container py-10 lg:p-0 w-full lg:w-4/12 bg-apricot hover:bg-[#c3a5ba4a] group lg:bg-pink-100/70 lg:rounded-lg">
+          <div class="container max-lg:!bg-[#000000a1] max-lg:!text-white py-10 lg:p-0 w-full lg:w-4/12 bg-apricot hover:bg-[#c3a5ba4a] group lg:bg-pink-100/70 lg:rounded-lg">
             
           <EmailForm />
  

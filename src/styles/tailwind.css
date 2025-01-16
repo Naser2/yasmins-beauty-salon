@@ -34,8 +34,8 @@
     --brand-header-height: 79px;
     --body-background-color: var(--color-white);
     --body-alt-background-color: var(--color-gray-200);
-    --body-font-family: 'adobe-clean', 'Adobe Clean', 'Trebuchet MS', sans-serif;
-    --body-serif-font-family: 'adobe-clean-serif', 'Adobe Clean Serif', serif;
+    /* --body-font-family: 'adobe-clean', 'Adobe Clean', 'Trebuchet MS', sans-serif; */
+    --body-serif-font-family: 'GOTHICB', 'GothicB' !important;
     --body-font-weight: normal;
     --body-color: var(--color-gray-800);
     --body-line-height: 1.5;
@@ -77,6 +77,7 @@
     --defaultAnimationEasing: cubic-bezier(0.25,0.1,0.25,1);
     --svcRoundedCorners: 3.3333%/5.298%;
     --svcShadowFilter: drop-shadow(0px 4px 1px rgba(0,0,0,.11)) drop-shadow(0px 0px 2px rgba(0,0,0,.24));
+
 }
 
 .daeduw {
@@ -120,7 +121,7 @@ h1, h2, h3, h4, h5, h6, .h0, .h1, .h2, .h3, .h4, .h5, .h6 {
 h1 {
     margin-top: 0;
     margin-bottom: 0.2em;
-    font-family: WF Visual Sans, sans-serif;
+    /* font-family: WF Visual Sans, sans-serif; */
     font-size: 5.5rem;
     font-weight: 600;
     line-height: 1.06;
@@ -141,14 +142,14 @@ h1 {
 h2 {
     margin-top: 0;
     margin-bottom: 0.3em;
-    font-family: WF Visual Sans, sans-serif;
+    /* font-family: WF Visual Sans, sans-serif; */
     font-size: 3.8rem;
     font-weight: 600;
     line-height: 1;
 }
 
 .paragraph-1-25 {
-    font-family: WF Visual Sans Text, sans-serif;
+    /* font-family: WF Visual Sans Text, sans-serif; */
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.6;
@@ -192,7 +193,7 @@ h2 {
     /* overflow: hidden; */
     /* animation: slide 3s infinite; */
     transform: translateX(-100%);
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     /* border-right: 2px solid #000; */
   }
   
@@ -509,7 +510,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .massi {
     font-size: 13px;
-    font-family: GOTHIC,HelveticaNeue,Helvetica Neue,Helvetica,Arial,Tahoma,sans-serif !important;
+    /* font-family: GOTHIC,HelveticaNeue,Helvetica Neue,Helvetica,Arial,Tahoma,sans-serif !important; */
     line-height: 1.8;
     color: #000;
 }
@@ -662,7 +663,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .ec-size .ec-store {
     margin: 0;
     padding: 0;
-    font-family: pacifica-w00-condensed,fantasy;
+    /* font-family: pacifica-w00-condensed,fantasy; */
     text-align: left;
     word-wrap: normal;
     word-break: normal;
@@ -875,8 +876,8 @@ rs-layer-wrap, rs-mask-wrap, rs-cbg-mask-wrap {
     .py-4{padding-bottom:1rem;padding-top:1rem;}
     .pb-2{padding-bottom:.5rem;}
     .pt-1{padding-top:.25rem;}
-    .font-sans{font-family:Mabry,sans-serif;}
-    .font-serif{font-family:Galliard,serif;}
+    /* .font-sans{font-family:Mabry,sans-serif;}
+    .font-serif{font-family:Galliard,serif;} */
     .text-xs{font-size:12px;line-height:18px;}
     .text-lg{font-size:20px;line-height:28px;}
     .uppercase{text-transform:uppercase;}
@@ -894,8 +895,8 @@ rs-layer-wrap, rs-mask-wrap, rs-cbg-mask-wrap {
     .val-w-email div{opacity:0;pointer-events:none;}
     .fill-current{fill:currentColor;}
     .site-credit{-webkit-transition:-webkit-transform 1s cubic-bezier(.87,0,.13,1);transition:-webkit-transform 1s cubic-bezier(.87,0,.13,1);-o-transition:transform 1s cubic-bezier(.87,0,.13,1);transition:transform 1s cubic-bezier(.87,0,.13,1);transition:transform 1s cubic-bezier(.87,0,.13,1),-webkit-transform 1s cubic-bezier(.87,0,.13,1);}
-    .serializer{font-family:Galliard,serif;}
-    .serializer strong{font-family:Mabry,sans-serif;font-weight:400;}
+    /* .serializer{font-family:Galliard,serif;}
+    .serializer strong{font-family:Mabry,sans-serif;font-weight:400;} */
     @media (max-width:1023px){
     .footer-tab{border-bottom:1px solid;overflow:hidden;width:100%;}
     .footer-content{max-height:0;-webkit-transition:all .6s cubic-bezier(.87,0,.13,1);-o-transition:all .6s cubic-bezier(.87,0,.13,1);transition:all .6s cubic-bezier(.87,0,.13,1);}
@@ -924,8 +925,8 @@ rs-layer-wrap, rs-mask-wrap, rs-cbg-mask-wrap {
     }
     }
     /*! CSS Used fontfaces */
-    @font-face{font-family:Mabry;font-weight:400;src:url(https://eadem.co/cdn/shop/t/132/assets/mabry-regular.static.woff2) format("woff2");}
+    /* @font-face{font-family:Mabry;font-weight:400;src:url(https://eadem.co/cdn/shop/t/132/assets/mabry-regular.static.woff2) format("woff2");}
     @font-face{font-family:Mabry;font-weight:500;src:url(https://eadem.co/cdn/shop/t/132/assets/Mabry-Medium.static.woff2) format("woff2");}
     @font-face{font-family:'Mabry';src:url(https://cdn.shopify.com/s/files/1/0512/1661/3529/files/mabry-regular.woff);font-weight:400;font-style:normal;font-display:swap;}
     @font-face{font-family:Galliard;font-weight:500;src:url(https://eadem.co/cdn/shop/t/132/assets/galliard-roman.static.woff2) format("woff2");}
-    @font-face{font-family:Galliard;font-style:italic;font-weight:500;src:url(https://eadem.co/cdn/shop/t/132/assets/galliard-italic.static.woff2) format("woff2");}
+    @font-face{font-family:Galliard;font-style:italic;font-weight:500;src:url(https://eadem.co/cdn/shop/t/132/assets/galliard-italic.static.woff2) format("woff2");} */

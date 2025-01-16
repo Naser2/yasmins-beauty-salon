@@ -261,6 +261,7 @@ function RootLayoutInner({ className, children }) {
             <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/">Home</Link></span>
              <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/about">About</Link></span>
               <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/#SERVICES">Services</Link></span>
+              <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400 max-lg:hidden'><Link href="/gift">Gift Cards</Link></span>
               <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/#CONTACT">Contact</Link></span>
         
               {/* <Navigation /> */}
