@@ -34,6 +34,7 @@ import Bessseller3 from '@/images/massi/Bessseller-3.png'
 
 import Intro from '@/components/Intro'
 import { ReusableButton } from '@/components/ReusableButton'
+import LastSection from '@/components/LastSection'
 let blogArticles = (await loadMDXMetadata('blog')).slice(0, 2)
 
 export const footerNavigation = {
@@ -311,7 +312,7 @@ function BestSellers() {
                   className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8"
                 >
                   {group.people.map((person) => (
-                    <a key={person.name}   href='#/services/5x5-hd-lace-closure'>
+                <Link key={person.name}   href='#/services/5x5-hd-lace-closure'>
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-1xl bg-white hover:bg-main ring-black ring-1">
                           <Image
@@ -332,7 +333,7 @@ function BestSellers() {
                         </div>
                       </FadeIn> 
                      
-                    </a>
+                </Link>
                   ))}
                 </ul>
               </div>
@@ -486,7 +487,7 @@ export default async function Home() {
                       style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
                         Booking
                     </button>
-                  </a> */}
+              </Link> */}
         
       <div className='text-center mt-32 bg-black border-t border-black min-[700px]:hidden' />
         <BestSellers />
@@ -543,10 +544,10 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl overflow-hidden px-6 sm:pb-6 lg:px-8">
           <div className="mt-[em] flex justify-center  gap-x-3 lg:gap-x-7">
           {footerNavigation.social.map((item) => (
-                            <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
+                        <Link key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
                               <span className="sr-only">{item.name}</span>
                               <item.icon aria-hidden="true" className="h-6 w-6" />
-                            </a>
+                        </Link>
                           ))}
           </div>
          
@@ -562,7 +563,7 @@ export default async function Home() {
               className='h-full w-full rounded-2xl'/>
             </div>
             </div>
-            <a 
+        <Link 
       href="https://maps.app.goo.gl/1ccoZ1b9kdXKK9Eg8"
       target="_blank"
       rel="noopener noreferrer"
@@ -572,72 +573,7 @@ export default async function Home() {
         </div>
 
 
-        {/* <ContactSection /> */}
-      <div className="group bg-theme-2  lg:bg-black relative lg:mt-12  lg:mt-24 slideshow__slide  slick-slide slick-current slick-active border-t  border-[#03302c] " data-slick-index="0" aria-hidden="false" style={{width:"100%", position: 'relative', left: '0px', top: '0px',  opacity: 1}} >
-        <div href="#/services" className="slideshow__link flex " tabindex="0">
-            <img src={'yasmin_img_desktop.png'} className='h-full w-full max-[700px]:hidden'/>
-            <img src={'/yasmin_img_mobile.png'} className='h-full w-full min-[700px]:hidden'/>
-          <FadeInStagger key={'INTRO'}>
-            <FadeIn>
-              <div className="absolute inset-x-0 lg:inset-x-20 top-[48%] md:top-[45%] lg:top-40%] mx-6 rounded-md py-4  md:py-12 md:px-12 scontent-center !bg-[#ff149305] transition duration-150 transform home text-center wow fadeIn text-white max-w-7xl justify-centr mx-auto rs-parallax-wrap  min-[600px]:mt-[10%]"  style={{visibility:"visible", animationName:"fadeIn"}}>
-              <div className="rs-parallax-wrap mb-4 inset-x-0 xl:!pb-24"  style={{position: 'absolute' , display: 'block' ,'pointer-events': 'auto', 'z-index': 9, visibility: 'visible', perspective: '601px'}}>
-                <h2 className={clsx('animation !font-bold  inline-flex text-[wheat] !text-[2.3em]  lg:text-[wheat] md:!text-[5em]  lg:!text-[4em] xl:!text-[6em]  signature-font  animated-logo pb-5')}>
-                YASMINS BEAUTY</h2>
-                </div> 
-             
-                <div className='justify-center lg:text-3xl lg:text-[wheat] max-[700px]:pt-[10%] pt-[12%] xl:pt-[11%]'>
-              <p className={clsx('justify-center text-xl sm:text-[1.8em] transition duration-250 transform text-sm text-white !text-[#f8e8cd] !max-lg:hidden ')}> 
-                  Our specialists at your service.
-                </p>
-                </div> 
-                <div >
-                <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300  ">
-                  <Link className={clsx("hover:!text-[#f8e8cd] min-w-[264px] hover:rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-[#03302c] !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360 max-h-[5rem]")}
-                       href="tel:8622526325"
-                    >Book Now 
-                  </Link>
-
-           
-                </div>
-                </div> 
-              </div>
-            </FadeIn>
-          </FadeInStagger>
-        </div>
-        
-        <div class="px-6 pt-0 md:pt-0  sm:mx-0 sm:pt-5 md:px-12 border-b hover:border-teal-800 bg-[#272423] ">
-          <div href="#/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full  grid-cols-2 md:grid-cols-3">
-                  <ul className="max-w-4xl lg:max-w-none flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
-                    <li>
-                      <span className="inline-block w-full py-2 px-3">
-                        <Link href="/about" className="-mb-1 product-details__product-title text-xl  font-semibold !text-white" itemprop="name" style={{"text-transform": 'none !important' }}>Learn More</Link>
-                      </span>
-                    </li>
-                  </ul>
-                  <div className="hidden md:flex items-center justify-center gap-4 mb-4 pt-4 ">
-                    
-                    <a
-                      href="tel:8622526325"
-                      className="text-lg font-bold text-gray-100  transition-colors"
-                    >
-                      862-252-6325
-                    </a>
-                    <span className="text-gray-500">|</span>
-                    <a
-                      href="tel:9733953900"
-                      className="text-lg font-bold text-gray-100  transition-colors"
-                    >
-                      973-395-3900
-                    </a>
-                  </div>
-                    <div class="flex justify-end">
-                      <Link   href="/about" data-tooltip-target="card-nav-tabs-example-copy-clipboard-tooltip" data-tooltip-placement="bottom" type="button"  className="flex items-center px-3 py-2 text-xs font-medium text-gray-600 hover:text-blue-700">
-                        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 44 44" width="24" aria-hidden="true" style={{color: 'white'}} class="Navbar_chevronDown__BsZjb rotate-[-85deg]"><path d="M11 9l11 11 11-11"></path></svg>
-                      </Link>
-                    </div>
-                  </div>  
-              </div>
-          </div>
+     <LastSection />
 
         {/* <Services /> */}
           <div className="max-[700px]:hidden">

@@ -4,6 +4,7 @@ import '@/styles/tailwind.css'
 // import { Sugela} from '../../public/fonts/sugelasugela-gowdq.ttf'
 import styles from  '@/styles/base.css'
 import Footer from '@/components/Footer'
+import BackToTop from '@/components/BackToTop'
 
 export const metadata = {
   title: {
@@ -24,6 +25,7 @@ export default function Layout({ children }) {
     <html lang="en" className="h-full bg-[#eed1e3] text-base antialiased">
       <body className="flex min-h-full flex-col">
         <RootLayout className={styles.testFont}>{children}</RootLayout>
+        <BackToTop />
         {/* <Footer /> */}
       </body>
     </html>

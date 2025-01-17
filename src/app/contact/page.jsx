@@ -120,7 +120,7 @@ const ContactCard = ({icon, title, content, href}) => {
 
                       <span class="text-gray-500 ">
                           
-                          {icon && <div className='ml-1 mt-1 w-[32px] w-[32px] rounded-full border border-black bg-[#b89499]  text-[#faedd7]  p-[6px] '>{icon}</div>}
+                          {icon && <div className='ml-1 mt-1 w-[32px] w-[32px] bg-[#ffffff] rounded-full border border-black group-hover:bg-[#b89499] group-hover:text-[#faedd7] p-[6px]'>{icon}</div>}
 
                         </span>
                           <div class="my-0 flex w-full min-w-0 max-w-full items-center gap-2 text-sm ">

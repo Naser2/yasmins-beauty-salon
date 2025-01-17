@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const ReusableButton = ({
@@ -21,7 +22,7 @@ export const ReusableButton = ({
   `;
 
   return isLink ? (
-    <a 
+<Link
       href={href}
       className={`${baseClasses} ${hoverClasses}`}
       style={{
@@ -34,7 +35,7 @@ export const ReusableButton = ({
       }}
     >
       {children}
-    </a>
+</Link>
   ) : (
     <button
       onClick={onClick}

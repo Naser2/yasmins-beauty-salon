@@ -42,7 +42,7 @@ const TermsAndConditions = () => {
   return (
 
     <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-center mb-8">Terms and Conditions</h1>
+          <h1 className="text-3xl font-bold text-center mb-8">POLICIES</h1>
           <p className="text-gray-700 mb-8">
               Welcome to  <span className='text-pink-400 font-semibold'>Yasmin Beauty Salon</span>! By accessing or using our services, you agree to be bound by the following terms
               and conditions. Please read them carefully.
@@ -53,7 +53,7 @@ const TermsAndConditions = () => {
                   {termsDetails.map((item) => (
                       <div key={item.id} className="p-6 border rounded-lg hover:shadow-lg">
                           <div className="flex items-center mb-4">
-                              <span className="text-main bg-[#093834de] hover:text-[#f5deb3] w-10 h-10 p-[0.3px] flex items-center justify-center rounded-full mr-4">
+                              <span className="ml-1 -mt-1  mr-4 w-[32px] w-[32px] rounded-full bg-main border border-black group-hover:bg-[#b89499] group-hover:text-[#faedd7] p-[6px]">
                                   {item.icon}
                               </span>
                               <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -69,7 +69,7 @@ const TermsAndConditions = () => {
       <div className="my-12 pt-6 " id="ADDITIONAL_TERMS">
       <FadeInStagger key={'ADDITIONAL_TERMS'}>
          <FadeIn>
-         <h2 className="text-2xl font-semibold mb-4">Additional Terms</h2>
+         <h2 className="text-2xl font-semibold mb-4">Terms and Conditions</h2>
               <p className="text-gray-700 mb-4">
                   These terms and conditions govern all transactions between <span className='text-pink-400 font-semibold'>Yasmin Beauty Salon</span> and its clients. By using our
                   services, you agree to comply with the following:

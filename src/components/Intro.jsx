@@ -87,10 +87,10 @@ export default function Intro() {
              
                   <div className="mt-[2em] flex justify-center  gap-x-3 lg:gap-x-7">
                   {footerNavigation.social.map((item) => (
-                            <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
+                            <Link key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
                               <span className="sr-only">{item.name}</span>
                               <item.icon aria-hidden="true" className="h-6 w-6" />
-                            </a>
+                            </Link>
                           ))}
         
           </div>

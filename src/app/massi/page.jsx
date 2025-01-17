@@ -38,6 +38,7 @@ import Bessseller2  from '@/images/massi/Bessseller-2.webp'
 import Bessseller3 from '@/images/massi/Bessseller-3.png'
 import clsx from 'clsx'
 import Intro from '@/components/Intro'
+import Link from 'next/link'
 
 
 function Culture() {
@@ -237,7 +238,7 @@ function BestSellers() {
                   className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8"
                 >
                   {group.people.map((person) => (
-                    <a key={person.name}   href='#/services/5x5-hd-lace-closure'>
+                    <Link key={person.name}   href='#/services/5x5-hd-lace-closure'>
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-1xl bg-white hover:bg-main ring-black ring-1">
                           <Image
@@ -258,7 +259,7 @@ function BestSellers() {
                         </div>
                       </FadeIn> 
                      
-                    </a>
+                    </Link>
                   ))}
                 </ul>
               </div>
@@ -290,11 +291,11 @@ export default async function Home() {
         <div className="relative -mt-38 lg:-mt-[5%] slideshow__slide  slick-slide slick-current slick-active index-section " data-slick-index="0" aria-hidden="false"
         style={{width:"100%", position: 'relative', left: '0px', top: '0px', 'z-index':'999', opacity: 1}} 
         >
-          <a href="#/services" className="slideshow__link" tabindex="0">
+          <Link href="#/services" className="slideshow__link" tabindex="0">
           <img src={massiLG.src} className='h-full w-full max-[700px]:hidden'/>
           <img src={massi.src} className='h-full w-full min-[700px]:hidden'/>
             {/* <img src="//erinhhair.com/cdn/shop/files/8C896AC9-881F-453B-8BA2-29D98F935A69.png?v=1676572821"/> */}
-          </a> 
+          </Link> 
        <Intro />
         </div>
        {/* <Container className="mt-16"> */}
@@ -347,16 +348,16 @@ export default async function Home() {
          >
            Review my catalogue, and explore the perfect service for you. </p >
            <div className="gap-x-6  md:gap-x-24">
-           <a href="#CONTACT">
+           <Link href="#CONTACT">
            <button href="#CONTACT"
            id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
           className="sc-fznxsB cYgHSw aos-init aos-animate mr-6"
-          style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>Contact</button></a>
-          <a href="#CALL">
+          style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>Contact</button></Link>
+          <Link href="#CALL">
           <button href="#CALL"
            id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
           className="sc-fznxsB cYgHSw aos-init aos-animate bg-black min-[600px]:bg-black" 
-          style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'rgb(255, 255, 255)', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>Booking</button></a>
+          style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'rgb(255, 255, 255)', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>Booking</button></Link>
            </div>
           
           
@@ -386,20 +387,20 @@ export default async function Home() {
 
  
 {/* <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
+    <Link href="#">
         <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
-    </a>
+    </Link>
     <div class="p-5">
-        <a href="#">
+        <Link href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-        </a>
+        </Link>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <Link href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             Read more
              <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
-        </a>
+        </Link>
     </div>
 </div> */}
 
@@ -426,8 +427,8 @@ export default async function Home() {
      </div>  */}
      <div >
      <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300">
-        <a className={clsx(" hover:!text-[#f8e8cd]  !border-[wheat] ClassicButton_button__ETGhE transition !text-[#845201] group-hover:!text-[wheat] duration-150 transform btn text-black justify-center bg-[#efc680ba]  !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
-         href="#/CONTACT">Book Now </a>
+        <Link className={clsx(" hover:!text-[#f8e8cd]  !border-[wheat] ClassicButton_button__ETGhE transition !text-[#845201] group-hover:!text-[wheat] duration-150 transform btn text-black justify-center bg-[#efc680ba]  !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
+         href="#/CONTACT">Book Now </Link>
      </div>
      </div> 
   
@@ -438,7 +439,7 @@ export default async function Home() {
   </div>
  
   <div class="px-6 pt-0 md:pt-0  sm:mx-0 sm:pt-5 md:px-12 border-b border-orange-300 bg-[#6420ff] bg-[rgb(137,96,86)]">
-  <a href="#/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full grid-cols-2">
+  <Link href="#/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full grid-cols-2">
            <ul className="max-w-4xl lg:max-w-none flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
               <li>
                 <span className="inline-block w-full py-2 px-3">
@@ -451,7 +452,7 @@ export default async function Home() {
                   <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 44 44" width="24" aria-hidden="true" style={{color: 'white'}} class="Navbar_chevronDown__BsZjb rotate-[-85deg]"><path d="M11 9l11 11 11-11"></path></svg>
                 </button>
               </div>
-            </a>  
+            </Link>  
         </div>
     </div>
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-accessibility color-fg-accent mr-2">

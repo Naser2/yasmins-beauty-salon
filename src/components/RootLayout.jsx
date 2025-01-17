@@ -101,9 +101,9 @@ export default function Example() {
           aria-hidden={mobileMenuOpen ? 'true' : undefined}
           inert={mobileMenuOpen ? '' : undefined}
           >
-          <a href="#"><h4 className="text-white ">
+          <Link href="#"><h4 className="text-white ">
              Welcome to Yasmins</h4>
-          </a>
+          </Link>
         </div>
         <Link href="/" role="link" className="-ml-4 mr-4">
                 <div id="DIALOG_LOGO" className={ clsx(mobileMenuOpen ? resizeIconAnimation : "w-[140px] mt-4 sm:w-[180px] sm:-mt-1") }
@@ -137,13 +137,13 @@ export default function Example() {
         {/* <div className="mt-[4.5rem] lg:mt-1 flex lg:flex-1"
           aria-hidden={mobileMenuOpen ? 'true' : undefined}>
           
-          <a href="#" className="">
+          <Link href="#" className="">
             <span className="sr-only">Your Company</span>
            <Link href="/" role="link" class="mr-4">
               <img src="/cropped-YasminBeautyShop.png"
                class="max-w-[63vw] sm:!max-h-[4rem] lg:!max-h-[5.5rem] " width="356" height="67" alt="YasminBeauty Hair Salon Logo" id="logo" data-height-percentage="54" data-actual-width="356" data-actual-height="67" />
             </Link>  
-          </a>
+          </Link>
         </div> */}
         <div className="..flex ..lg:hidden">
           <button
@@ -176,10 +176,10 @@ export default function Example() {
                       <item.icon aria-hidden="true" className="h-7 w-7 text-gray-600 group-hover:text-indigo-600" />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
+                      <Link href={item.href} className="block font-semibold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
@@ -187,33 +187,33 @@ export default function Example() {
               </div>
               <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                 {callsToAction.map((item) => (
-                  <a
+              <Link
                     key={item.name}
                     href={item.href}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-[#000000db]   hover:bg-gray-100"
                   >
                     <item.icon aria-hidden="true" className="h-7 w-7 flex-none text-gray-400" />
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </PopoverPanel>
           </Popover>
 
-          <a href="/about" className="text-sm/6 font-semibold  black">
+          <Link href="/about" className="text-sm/6 font-semibold  black">
            About
-          </a>
-          <a href="/gift" className="text-sm/6 font-semibold text-gray-900">
+          </Link>
+          <Link href="/gift" className="text-sm/6 font-semibold text-gray-900">
             Gift Cards
-          </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          </Link>
+          <Link href="#" className="text-sm/6 font-semibold text-gray-900">
             Company
-          </a>
+          </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="#" className="text-sm/6 font-semibold text-gray-900">
            Call Us <span aria-hidden="true">&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} id="DIALOG" className="">
@@ -252,12 +252,12 @@ export default function Example() {
               </Link>
             </div>
 
-            <a href="#" className="w-[50%] -m-1.5 p-1.5 sr-only lg:not-sr-only text-black footer-label block py-4 lg:pt-0 lg:mb-4 text-lg font-sans uppercase">
+            <Link href="#" className="w-[50%] -m-1.5 p-1.5 sr-only lg:not-sr-only text-black footer-label block py-4 lg:pt-0 lg:mb-4 text-lg font-sans uppercase">
               <span className="sr-only">Your Company</span>
               <Link href="/" role="link" class="mr-4 font-serif mb-1  pt-1 lg:p-0">
              MENU 
             </Link>  
-            </a>
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -289,43 +289,43 @@ export default function Example() {
                   </DisclosurePanel>
                 </Disclosure>
                 <div className="flex flex-col space-y-4">
-                      <a
+                  <Link
                         href="/"
                         className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                         Home
-                      </a>
-                      <a
+                      </Link>
+                  <Link
                         href="/about"
                         className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                         About
-                      </a>
-                      <a
+                      </Link>
+                  <Link
                         href="/gift"
                         className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                         Gift Cards
-                      </a>
+                      </Link>
                    
-                      <a
+                  <Link
                         href="/map"
                         className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                       LOCATION
-                      </a>
-                      <a
+                      </Link>
+                  <Link
                         href="/contact"
                         className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                      Contact
-                      </a>
-                      <a
+                      </Link>
+                  <Link
                         href="/terms"
                         className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                      Policy
-                      </a>
+                      </Link>
                     </div>
 
                    <footer className="mt-[1em]  sm:mt-[4em] w-full bardrop-blur ">
@@ -334,10 +334,10 @@ export default function Example() {
                       Social Media</p>
                         <div className="mt-[1em] flex justify-center  gap-x-3 lg:gap-x-7">
                           {footerNavigation.social.map((item) => (
-                            <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
+                            <Link key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
                               <span className="sr-only">{item.name}</span>
                               <item.icon aria-hidden="true" className="h-6 w-6" />
-                            </a>
+                            </Link>
                           ))}
                         </div>
                        
@@ -585,9 +585,9 @@ function RootLayoutInner({ className, children }) {
          className={`absolute left-0 right-0 top-0 z-40 pt-3 px-4 text-center bg-[#021c1a] hover:border-b border-pink-400 hover:bg-[#093834de]  border-t border-[#eed1e3]`} 
           aria-hidden={expanded ? 'true' : undefined}
           inert={expanded ? '' : undefined}>
-          <a href="#"><h4 className="text-white ">
+          <Link href="#"><h4 className="text-white ">
              Welcome to Yasmins</h4>
-          </a>
+          </Link>
         </div>
         <div class="mt-[2.5rem] z-30 bg-[#eed1e3] w relative pt-2 pb-2 px-4 lg:px-20 bg-white" bandcolor="main-bg-yellow">
           <div class="flex items-center justify-between mr-4">

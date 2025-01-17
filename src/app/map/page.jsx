@@ -49,7 +49,7 @@ const Map = () => {
         <div className="mt-12 text-center">
   {/* Phone Numbers */}
   <div className="flex items-center justify-center gap-4 mb-4  hidden lg:flex">
-    <PhoneIcon className="h-10 w-10 p-2 text-main rounded-full border bg-black/60  border-black " />
+    <PhoneIcon className="h-10 w-10 p-2 tml-1 -mt-1  mr-4 md:w-[32px] md:w-[32px] rounded-full bg-main border border-black group-hover:bg-[#b89499] group-hover:text-[#faedd7] p-[6px]" />
     <a
       href="tel:8622526325"
       className="text-lg font-semibold text-gray-700 hover:text-pink-500 transition-colors"
@@ -70,7 +70,7 @@ const Map = () => {
   <div className="flex flex-col gap-4 mb-4">
   {/* First Phone Entry */}
   <div className="flex items-center gap-4 ml-3 ">
-    <PhoneIcon className="h-10 w-10 p-2 text-main rounded-full border bg-black/60 border-black" />
+    <PhoneIcon className="h-10 w-10 p-2 tml-1 -mt-1  mr-4 md:w-[32px] md:w-[32px] rounded-full bg-main border border-black group-hover:bg-[#b89499] group-hover:text-[#faedd7] p-[6px]" />
     <a
       href="tel:8622526325"
       className="text-lg font-semibold text-gray-700 hover:text-pink-500 transition-colors"
@@ -81,7 +81,7 @@ const Map = () => {
 
   {/* Second Phone Entry */}
   <div className="flex items-center gap-4 ml-3">
-    <PhoneIcon className="h-10 w-10 p-2 text-main rounded-full border bg-black/60 border-black" />
+    <PhoneIcon className="h-10 w-10 p-2 tml-1 -mt-1  mr-4 md:w-[32px] md:w-[32px] rounded-full bg-main border border-black group-hover:bg-[#b89499] group-hover:text-[#faedd7] p-[6px]" />
     <a
       href="tel:9733953900"
       className="text-lg font-semibold text-gray-700 hover:text-pink-500 transition-colors"
@@ -93,7 +93,7 @@ const Map = () => {
 </div>
 <div className="flex items-center  gap-4 ml-3">
     
-    <MapIcon className="h-10 w-10 p-2 text-main rounded-full border bg-black/60  border-black" />
+    <MapIcon className="h-10 w-10 p-2 tml-1 -mt-1  mr-4 md:w-[32px] md:w-[32px] rounded-full bg-main border border-black group-hover:bg-[#b89499] group-hover:text-[#faedd7] p-[6px]" />
     <a
       href="https://maps.app.goo.gl/1ccoZ1b9kdXKK9Eg8"
       target="_blank"

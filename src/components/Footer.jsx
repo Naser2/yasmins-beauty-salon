@@ -29,7 +29,7 @@ const navigation = [
   {
     title: 'MBEAUTENOIR',
     links: [
-      { title: 'About', href: '#/about' },
+      { title: 'About', href: '#/Linkbout' },
    
       { title: 'Contact', href: '#/contact' }, 
         { title: 'Shop With Us', href: '/process' },
@@ -106,7 +106,7 @@ export function NewsletterForm() {
             aria-label="Submit"
             className="flex aspect-square h-full items-center justify-center rounded-xl bg-black ring-purple-100 ring-2  text-white transition hover:bg-neutral-800"
           >
-            <ArrowIcon className="w-4" />
+            <Link rrowIcon className="w-4" />
           </button>
         </div>
       </div>
@@ -210,21 +210,21 @@ function  Footer(){
                   <div class="footer-content">
                        
                       <div class="font-serif mb-1  pt-1 lg:p-0">
-                          <a href="/pages/about" class="inline">About</a>
+                         <Link href="/Linkbout" class="inline">About</Link>
                       </div> 
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/map" class="inline">Salon Finder</a>
+                         <Link href="/map" class="inline">Salon Finder</Link>
                       </div> 
                        
                      
 {/*                        
                       <div class="font-serif mb-1 ">
-                          <a href="/pages/beauty-burden" class="inline">Beauty Burden</a>
+                         <Link href="/pages/beauty-burden" class="inline">Beauty Burden</Link>
                       </div>  */}
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/gift" class="inline">Get $10 Off</a>
+                         <Link href="/gift" class="inline">Get $10 Off</Link>
                       </div> 
                       
                   </div> 
@@ -237,19 +237,19 @@ function  Footer(){
                   <div class="footer-content">
                        
                       <div class="font-serif mb-1  pt-1 lg:p-0">
-                          <a href="/terms" class="inline">FAQ</a>
+                         <Link href="/terms" class="inline">FAQ</Link>
                       </div> 
                        
                       {/* <div class="font-serif mb-1 ">
-                          <a href="/pages/recycling" class="inline">Recycling</a>
+                         <Link href="/pages/recycling" class="inline">Recycling</Link>
                       </div>  */}
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/terms" class="inline">Shipping &amp; Returns</a>
+                         <Link href="/terms" class="inline">Shipping &amp; Returns</Link>
                       </div> 
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/contact" class="inline">Contact Us</a>
+                         <Link href="/contact" class="inline">Contact Us</Link>
                       </div> 
                         
                   </div> 
@@ -262,15 +262,15 @@ function  Footer(){
                   <div class="footer-content">
                        
                       <div class="font-serif mb-1  pt-1 lg:p-0">
-                          <a href="https://www.instagram.com/yasminsbeautysalon" class="inline" target="_blank">Instagram</a>
+                         <Link href="https://www.instagram.com/yasminsbeautysalon" class="inline" target="_blank">Instagram</Link>
                       </div> 
                        
                       <div class="font-serif mb-1 ">
-                          <a href="https://www.tiktok.com/@yasmine.benz3?_t=8s22SzlrRfi&_r=1" class="inline" target="_blank">Tiktok</a>
+                         <Link href="https://www.tiktok.com/@yasmine.benz3?_t=8s22SzlrRfi&_r=1" class="inline" target="_blank">Tiktok</Link>
                       </div> 
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/carrers" class="inline" target="_blank">Careers</a>
+                         <Link href="/carrers" class="inline" target="_blank">Careers</Link>
                       </div> 
                         
                   </div>
@@ -282,13 +282,13 @@ function  Footer(){
                   </label>
                   <div class="footer-content">
                       <div class="font-serif mb-1 pt-1 lg:p-0">
-                          <a href="/terms" class="inline">Terms and Conditions</a>
+                         <Link href="/terms" class="inline">Terms and Conditions</Link>
                       </div>
                       <div class="font-serif mb-1">
-                          <a href="/terms#ADDITIONAL_TERMS"class="inline">Privacy Policy</a>
+                         <Link href="/terms#ADDITIONAL_TERMS"class="inline">Privacy Policy</Link>
                       </div>
                       <div class="font-serif mb-1">
-                          <a data-acsb-custom-trigger="true" href="map" class="inline cursor-pointer">Accessibility</a>
+                         <Link data-acsb-custom-trigger="true" href="map" class="inline cursor-pointer">Accessibility</Link>
                       </div>
                   </div> 
               </li>
@@ -305,13 +305,13 @@ function  Footer(){
           <span class="uppercase text-sans-xs-caps">© 2025 YASMINS BEAUTY SALON LLC</span>
           <ul class="font-sans text-xs tracking-plus leading-relaxed flex">
               <li class="mr-6 hidden lg:block">
-                  <a href="/terms">Terms &amp; Conditions</a>
+             <Link href="/terms">Terms &amp; Conditions</Link>
               </li>
               <li class="mr-6 hidden lg:block">
-                  <a href="/terms#ADDITIONAL_TERMS">Privacy Policy</a>
+                 <Link href="/terms#ADDITIONAL_TERMS">Privacy Policy</Link>
               </li>
               <li class="mr-6 hidden lg:block">
-                  <a  href="/map" data-acsb-custom-trigger="true" class="cursor-pointer">Accessibility</a>
+                 <Link  href="/map" data-acsb-custom-trigger="true" class="cursor-pointer">Accessibility</Link>
               </li> 
               <li>
               <div class="site-cta text-sm  cursor-pointer select-none lg:hidden">By Nas</div>
@@ -324,10 +324,10 @@ function  Footer(){
       <div class="flex justify-between items-center h-btn font-sans text-xs tracking-plus leading-relaxed"> 
           <ul class="flex"> 
               <li>
-                  <div class="flex"><span class="block">Designed by&nbsp;</span><a href="https://www.nassersanou.com/" target="_blank" class="underline">Nasser Sanou</a></div>
+                  <div class="flex"><span class="block">Designed by&nbsp;</span><Link  href="https://www.nassersanou.com/" target="_blank" class="underline">Nasser Sanou</Link></div>
               </li>
               <li class="ml-3">
-                  <div class="flex"><span class="block">Built by&nbsp;</span><a href="https://www.giveitdone.com" target="_blank" class="underline">Give It Done</a></div>
+                  <div class="flex"><span class="block">Built by&nbsp;</span><Link  href="https://www.giveitdone.com" target="_blank" class="underline">Give It Done</Link></div>
               </li>  
           </ul>
           <ul class="flex">  
