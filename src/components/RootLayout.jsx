@@ -11,7 +11,7 @@ import {
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
+import { isMotionValue, motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -20,6 +20,337 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+
+
+import {
+  Dialog,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from '@headlessui/react'
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline'
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+
+const products = [
+  { name: 'Braids', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+  { name: 'Scalp Treatments', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'Front Laces', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
+  { name: 'Eyelashes ', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+
+]
+const callsToAction = [
+  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
+  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+]
+
+export default function Example() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [resizeIconAnimation, setResizeIconAnimation] = useState("33vw");
+  const [navBG, setnavBG] = useState("bg-gradient-to-tr from-white via-[#f4d7db]  to-[#ecaee5]");``
+
+  useEffect(() => {
+    let timeout;
+    if (mobileMenuOpen) {
+      setResizeIconAnimation("w-[240px] mt-4 sm:w-[480px] sm:-mt-1");
+      timeout = setTimeout(() => {
+        setResizeIconAnimation("w-[240px] mt-4 sm:w-[200px] sm:-mt-1");
+      }, 500); // 0.5 seconds timeout
+    } else {
+      setResizeIconAnimation("w-[140px] mt-4 sm:w-[380px] sm:-mt-1");
+    }
+
+    // Cleanup function to clear timeout if mobileMenuOpen changes quickly
+    return () => clearTimeout(timeout);
+  }, [mobileMenuOpen]);
+  useEffect(() => {
+    let timeout;
+    if (!mobileMenuOpen) {
+      setnavBG(" bg-gradient-to-tr from-white via-[#f4d7db]   via-main to-[#ecaee5]");
+      timeout = setTimeout(() => {
+        setnavBG("bg-sky-300");
+      }, 500); // 0.5 seconds timeout
+    } else {
+      setnavBG("bg-gradient-to-tr from-white via-[#f4d7db]  to-[#ecaee5]");
+    }
+
+    // Cleanup function to clear timeout if mobileMenuOpen changes quickly
+    return () => clearTimeout(timeout);
+  }, [mobileMenuOpen]);
+
+  return (
+    <header className={clsx(`bg-white  mt-[2rem] lg:mt-[2.7rem]`)}   style={{
+      transition: "all 1.8s ease-in-out",
+      
+    }}>
+      <nav aria-label="Global" className={clsx( mobileMenuOpen && navBG ,"mx-auto  max-h-[5rem] flex max-w-7xl items-center justify-between p-6 lg:px-8  bg-gradient-to-tr from-white  via-white via-white  to-[#f6e0e3] lg:bg-gradient-to-tr lg:from-white lg:via-white  to-[#f6e0e3]  to-[#ecaee5] " )}>
+      <div
+         className={(clsx(`${mobileMenuOpen ? "bg-[#021c1a]" :"bg-[#093834de]"} absolute left-0 right-0 top-0 z-10 pt-3 px-4 text-center  hover:border-b border-pink-400   border-t border-[#eed1e3]`))} 
+          aria-hidden={mobileMenuOpen ? 'true' : undefined}
+          inert={mobileMenuOpen ? '' : undefined}
+          >
+          <a href="#"><h4 className="text-white ">
+             Welcome to Yasmins</h4>
+          </a>
+        </div>
+        <Link href="/" role="link" className="-ml-4 mr-4">
+                <div id="DIALOG_LOGO" className={ clsx(mobileMenuOpen ? resizeIconAnimation : "w-[140px] mt-4 sm:w-[180px] sm:-mt-1") }
+                  style={{
+                    transition: "all 1.8s ease-in-out",
+                    // width: mobileMenuOpen ? "200px" : {resizeIconAnimation},
+                   
+                    // maxHeight: mobileMenuOpen ? "unset" : "5.5rem",
+                    // overflow: "hidden",
+                    display: "inline-block",
+                  }}
+                >
+                  <img
+                    src={
+                      mobileMenuOpen
+                        ? "/ZXhLlC01.svg"
+                        : "/cropped-YasminBeautyShop.png"
+                    }
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                    alt="YasminBeauty Hair Salon Logo"
+                    id="logo"
+                    data-height-percentage="54"
+                    data-actual-width="356"
+                    data-actual-height="67"
+                  />
+                </div>
+              </Link>
+        {/* <div className="mt-[4.5rem] lg:mt-1 flex lg:flex-1"
+          aria-hidden={mobileMenuOpen ? 'true' : undefined}>
+          
+          <a href="#" className="">
+            <span className="sr-only">Your Company</span>
+           <Link href="/" role="link" class="mr-4">
+              <img src="/cropped-YasminBeautyShop.png"
+               class="max-w-[63vw] sm:!max-h-[4rem] lg:!max-h-[5.5rem] " width="356" height="67" alt="YasminBeauty Hair Salon Logo" id="logo" data-height-percentage="54" data-actual-width="356" data-actual-height="67" />
+            </Link>  
+          </a>
+        </div> */}
+        <div className="..flex ..lg:hidden">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(true)}
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon aria-hidden="true" className="h-7 w-7" />
+          </button>
+        </div>
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <Popover className="relative">
+            <PopoverButton className=" flex items-center gap-x-1 text-sm/6 font-semibold text-[#000000db]   ">
+              Product
+              <ChevronDownIcon aria-hidden="true" className="h-7 w-7 flex-none text-gray-400" />
+            </PopoverButton>
+
+            <PopoverPanel
+              transition
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+            >
+              <div className="p-4">
+                {products.map((item) => (
+                  <div
+                    key={item.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-black hover:text-white"
+                  >
+                    <div className="flex h-7 w-71 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <item.icon aria-hidden="true" className="h-7 w-7 text-gray-600 group-hover:text-indigo-600" />
+                    </div>
+                    <div className="flex-auto">
+                      <a href={item.href} className="block font-semibold text-gray-900">
+                        {item.name}
+                        <span className="absolute inset-0" />
+                      </a>
+                      <p className="mt-1 text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                {callsToAction.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-[#000000db]   hover:bg-gray-100"
+                  >
+                    <item.icon aria-hidden="true" className="h-7 w-7 flex-none text-gray-400" />
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </PopoverPanel>
+          </Popover>
+
+          <a href="/about" className="text-sm/6 font-semibold  black">
+           About
+          </a>
+          <a href="/gift" className="text-sm/6 font-semibold text-gray-900">
+            Gift Cards
+          </a>
+          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+            Company
+          </a>
+        </PopoverGroup>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" className="text-sm/6 font-semibold text-gray-900">
+           Call Us <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </nav>
+      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} id="DIALOG" className="">
+        <div className="fixed inset-0 z-10" />
+        <DialogPanel className={clsx(`${mobileMenuOpen && "hover:bg-gradient-to-tr from-[#f4d7db]  via-main to-[#ecaee5]"} fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`)}>
+          <div className="flex items-center justify-between ">
+          <div href="#" className="-m-1.5 p-1.5 lg:hidden">
+              <span className="sr-only">Your Company</span>
+              <Link href="/" role="link" className="-ml-4 mr-4">
+                <div id="DIALOG_LOGO"
+                  style={{
+                    transition: "all 1.8s ease-in-out",
+                    width: mobileMenuOpen ? "200px" : "33vw",
+                    // maxHeight: mobileMenuOpen ? "unset" : "5.5rem",
+                    // overflow: "hidden",
+                    display: "inline-block",
+                  }}
+                >
+                  <img
+                    src={
+                      mobileMenuOpen
+                        ? "/ZXhLlC01.svg"
+                        : "/cropped-YasminBeautyShop_svg"
+                    }
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                    alt="YasminBeauty Hair Salon Logo"
+                    id="logo"
+                    data-height-percentage="54"
+                    data-actual-width="356"
+                    data-actual-height="67"
+                  />
+                </div>
+              </Link>
+            </div>
+
+            <a href="#" className="w-[50%] -m-1.5 p-1.5 sr-only lg:not-sr-only text-black footer-label block py-4 lg:pt-0 lg:mb-4 text-lg font-sans uppercase">
+              <span className="sr-only">Your Company</span>
+              <Link href="/" role="link" class="mr-4 font-serif mb-1  pt-1 lg:p-0">
+             MENU 
+            </Link>  
+            </a>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon aria-hidden="true" className="h-7 w-7" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6 ">
+                <Disclosure as="div" className="..-mx-3">
+                  <DisclosureButton className="hover:bg-black hover:text-white header-tab group flex w-full items-center justify-between rounded-lg   border border-[#7d3b9287] hover:!border-[#03030387]  !border-[#7d3b9287] py-2 pl-3 pr-3.5 text-base/7 font-semibold text-[#000000db]   hover:bg-black hover:text-white lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6">
+                  <label for="products" class="footer-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase">PRODUCTS</label>
+                    <ChevronDownIcon aria-hidden="true" className="h-7 w-7 flex-none group-data-[open]:rotate-180" />
+                  </DisclosureButton>
+                  <DisclosurePanel className="mt-2 space-y-2 header-content">
+                    {[...products, ...callsToAction].map((item) => (
+                      <DisclosureButton
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className="font-serif mb-1  pt-1  block rounded-lg py-2 pl-6 pr-3  bg-[#ae92b84d] pl-2 "
+                      >
+                        {item.name}
+                      </DisclosureButton>
+                    ))}
+                  </DisclosurePanel>
+                </Disclosure>
+                <div className="flex flex-col space-y-4">
+                      <a
+                        href="/"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                      >
+                        Home
+                      </a>
+                      <a
+                        href="/about"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                      >
+                        About
+                      </a>
+                      <a
+                        href="/gift"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                      >
+                        Gift Cards
+                      </a>
+                   
+                      <a
+                        href="/map"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                      >
+                      LOCATION
+                      </a>
+                      <a
+                        href="/contact"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                      >
+                     Contact
+                      </a>
+                      
+                    </div>
+
+                   <footer className="mt-[7em]  sm:mt-[8em] w-full bardrop-blur ">
+                      <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-[4rem] pt-20 sm:pb-6 lg:px-8">
+                      <p href="/contact" className="headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white">Social Media</p>
+                        <div className="mt-[2em] flex justify-center  gap-x-3 lg:gap-x-7">
+                          {footerNavigation.social.map((item) => (
+                            <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
+                              <span className="sr-only">{item.name}</span>
+                              <item.icon aria-hidden="true" className="h-6 w-6" />
+                            </a>
+                          ))}
+                        </div>
+                       
+                      </div>
+                    </footer>
+              </div>
+            </div>
+          </div>
+        
+        </DialogPanel>
+        
+      </Dialog>
+       
+     
+    </header>
+  )
+}
+
+
 const footerNavigation = {
   main: [
     { name: 'About', href: '#' },
@@ -143,7 +474,7 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="#/contact" invert={invert}>
+          <Button href="/contact" invert={invert}>
             Contact us
           </Button>
           <button
@@ -187,7 +518,7 @@ function NavigationItem({ href, className, children }) {
   return (
     <Link
       href={href}
-      className={`${className ? className : 'bg-neutral-950 '}  group relative isolate -mx-6 lg:pl-12 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16`}
+      className={`${className ? className : 'bg-neutral-950 '}  group relative isolate -mx-6 lg:pl-12 lg:py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16`}
     >
       {children}
       <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
@@ -242,7 +573,8 @@ function RootLayoutInner({ className, children }) {
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-      <header>
+    <Example />
+      {/* <header>
         <div
          className={`absolute left-0 right-0 top-0 z-40 pt-3 px-4 text-center bg-[#021c1a] hover:border-b border-pink-400 hover:bg-[#093834de]  border-t border-[#eed1e3]`} 
           aria-hidden={expanded ? 'true' : undefined}
@@ -256,21 +588,22 @@ function RootLayoutInner({ className, children }) {
 
             <Link href="/" role="link" class="mr-4">
               <img src="/cropped-YasminBeautyShop.png" class="max-w-[33vw] sm:!max-h-[4rem] lg:!max-h-[5.5rem] " width="356" height="67" alt="YasminBeauty Hair Salon Logo" id="logo" data-height-percentage="54" data-actual-width="356" data-actual-height="67" />
-            </Link>
+            </Link>  
+              <Navigation />
             <div class="flex space-x-4">     
             <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/">Home</Link></span>
              <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/about">About</Link></span>
               <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/#SERVICES">Services</Link></span>
               <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400 max-lg:hidden'><Link href="/gift">Gift Cards</Link></span>
               <span class='text-sm md:text-lg lg:text-lg text-[#011211] hover:text-pink-400'><Link href="/#CONTACT">Contact</Link></span>
-        
-              {/* <Navigation /> */}
-              {/* NAVIGATION HERE */}
+         
+           
+       
             </div>
           </div>
         </div>
-      </header>
-
+      </header> */}
+   
       <motion.div
         layout
         style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}

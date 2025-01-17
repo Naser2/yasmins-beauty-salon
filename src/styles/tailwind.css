@@ -776,7 +776,16 @@ rs-layer-wrap, rs-mask-wrap, rs-cbg-mask-wrap {
     } 
 }
 
-
+#DIALOG_LOGO {
+    transition: all 0.8s ease-in-out !important;
+    max-height: 5.5rem; /* Default max-height */
+  }
+  
+  #DIALOG.open {
+    transition: all 0.8s ease-in-out !important;
+    max-height: unset; /* Remove height restriction when open */
+  }
+  
 /* -----------EADEM STYLE FOR FOOTER */
 
 /*! CSS Used from: https://eadem.co/cdn/shop/t/132/assets/bundle.css?v=170377168700381068951736414677 ; media=all */
@@ -897,6 +906,37 @@ rs-layer-wrap, rs-mask-wrap, rs-cbg-mask-wrap {
     .site-credit{-webkit-transition:-webkit-transform 1s cubic-bezier(.87,0,.13,1);transition:-webkit-transform 1s cubic-bezier(.87,0,.13,1);-o-transition:transform 1s cubic-bezier(.87,0,.13,1);transition:transform 1s cubic-bezier(.87,0,.13,1);transition:transform 1s cubic-bezier(.87,0,.13,1),-webkit-transform 1s cubic-bezier(.87,0,.13,1);}
     /* .serializer{font-family:Galliard,serif;}
     .serializer strong{font-family:Mabry,sans-serif;font-weight:400;} */
+    @media (max-width:1023px){
+        .header-tab{border-bottom:1px solid;overflow:hidden;width:100%;}
+        .header-content{
+            /* max-height:0; */
+            -webkit-transition:all .6s cubic-bezier(.87,0,.13,1);-o-transition:all .6s cubic-bezier(.87,0,.13,1);transition:all .6s cubic-bezier(.87,0,.13,1);}
+        .header-label{cursor:pointer;}
+        header input:checked~.footer-content{max-height:100vh;padding:0 0 1.5rem;}
+
+        }
+
+        a.header-tab {
+            padding: 9px 8px; /* More comfortable spacing */
+            font-size: 1rem; /* Adjust font size */
+            font-weight: 600; /* Slightly heavier for better readability */
+            min-height: 54px
+          }
+  .border-w-80 {
+    border-width: 3px !important
+  }
+  .border-main {
+    border-width: 2px !important
+  }
+  .bg-main {
+    background-color: #f6e0e3 !important
+  }
+  .text-main{
+        color: #f6e0e3 !importantx
+ 
+  }
+  .via-main{ background-color: #f6e0e3}
+  
     @media (max-width:1023px){
     .footer-tab{border-bottom:1px solid;overflow:hidden;width:100%;}
     .footer-content{max-height:0;-webkit-transition:all .6s cubic-bezier(.87,0,.13,1);-o-transition:all .6s cubic-bezier(.87,0,.13,1);transition:all .6s cubic-bezier(.87,0,.13,1);}

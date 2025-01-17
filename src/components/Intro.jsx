@@ -81,7 +81,7 @@ export default function Intro() {
                   bookNowColorChange,
                   "px-6 py-3 z-40 transition transform hover:-translate-y-1 hover:scale-110 hover:!text-[#f8e8cd] rounded-xl !border-[wheat] px-6 py-4  transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-black hover:!border-[wheat] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360"
                 )}
-                 href="#CALL"
+                 href="#CONTACT"
               >
                 Book Now
               </Link>
@@ -90,7 +90,7 @@ export default function Intro() {
         <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-[4rem] pt-20 sm:pb-6 lg:px-8 absolute inset-x-0 sm:right-0 bottom-[-5vh] sm:bottom-[-2vh] md:bottom-[4vh] lg:bottom-[2vh] xl:bottom-[3vh] lg:!left-[-567px] xl:!left-[-667px]">
           <div className="mt-[2em] flex justify-center  gap-x-3 lg:gap-x-7">
             {footerNavigation.social.map((item) => (
-              <a key={item.link} href={item.href} className="text-[wheat] hover:text-pink-600  bg-black/60 p-1  p-[0.5rem] rounded-full">
+              <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  bg-black/60  hover:bg-black  p-1  p-[0.5rem] rounded-full">
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="h-6 w-6" />
               </a>

@@ -21,7 +21,10 @@ module.exports = {
       borderRadius: {
         '4xl': '2.5rem',   
       },
-
+      
+      colors: {
+        main: '#f6e0e3', // Add your bg-main color here
+      },
       scrollBehavior: ['smooth'],
       fontFamily: { 
         // serif: ['Galliard', 'serif'],

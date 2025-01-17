@@ -347,13 +347,15 @@ export default async function Home() {
          >
            Review my catalogue, and explore the perfect service for you. </p >
            <div className="gap-x-6  md:gap-x-24">
-           <a href="#/contact"><button href="#/contact"
+           <a href="#CONTACT">
+           <button href="#CONTACT"
            id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
           className="sc-fznxsB cYgHSw aos-init aos-animate mr-6"
           style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>Contact</button></a>
-          <a href="#/services"><button href="#/services"
+          <a href="#CALL">
+          <button href="#CALL"
            id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
-          className="sc-fznxsB cYgHSw aos-init aos-animate bg-black min-[600px]:bg-[#eed1e3]" 
+          className="sc-fznxsB cYgHSw aos-init aos-animate bg-black min-[600px]:bg-black" 
           style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'rgb(255, 255, 255)', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>Booking</button></a>
            </div>
           

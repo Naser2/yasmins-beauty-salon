@@ -468,13 +468,13 @@ export default async function Home() {
                   <div className="gap-x-6  md:gap-x-24 sm:space-x-4 ">
                   <a href="#LOCATION"><button href="#/contact"
                       id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
-                      className="sc-fznxsB cYgHSw aos-init aos-animate mr-6"
+                      className="sc-fznxsB cYgHSw aos-init aos-animate mr-6 hover:!bg-main hover:text-black"
                       style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
                         Address</button></a>
                     <a href="#CALL">
                       <button href="#/services"
                       id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
-                      className="sc-fznxsB cYgHSw aos-init aos-animate bg-[#03302c] text-white hover:bg-pink-400 hover:text-white" 
+                      className="sc-fznxsB cYgHSw aos-init aos-animate bg-[#03302c] text-white hover:bg-main hover:text-black" 
                       style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
                         Booking
                     </button>
@@ -497,21 +497,21 @@ export default async function Home() {
                 Testimonials Coming Soon
               </Testimonial> 
       <Link   href="/gift">
-        <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-orange-300 bg-[#6420ff] bg-apricot border border-3xl rounded-xl shadow-lg hover:shadow-2xl ">
+        <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-black hover:border-pink-300 bg-main hover:bg-[#6420ff] bg-apricot border border-3xl rounded-xl shadow-lg hover:shadow-2xl ">
           <div className="flex justify-between items-center">
             {/* Left-aligned text */}
-            <h1 className="product-details__product-title ec-header-h3 font-display text-2xl font-semibold !text-white ">
+            <h1 className="product-details__product-title ec-header-h3 font-display text-2xl font-semibold text-black ">
               Get A Gift Card
             </h1>
 
             {/* Right-aligned link */}
-            <span className="flex text-sm mr-4 border bg-[#c3a5baad]  border-[#7c5f74]  shadow-sm   rounded-3xl">
+            <span className="flex text-sm bg-[#f6e0e3] mr-4  border-[#7c5f74]  shadow-sm   rounded-3xl">
               <Link
                 href="/gift"
                 data-tooltip-target="card-nav-tabs-example-copy-clipboard-tooltip"
                 data-tooltip-placement="bottom"
                 type="button"
-                className="flex items-center px-3 py-2 text-xs font-medium text-gray-600 hover:text-blue-700"
+                className="flex items-center px-3 py-2 text-xs text-black  font-medium text-gray-600 hover:text-blue-700"
               >
                 <svg
                   fill="none"
@@ -524,7 +524,7 @@ export default async function Home() {
                   viewBox="0 0 44 44"
                   width="24"
                   aria-hidden="true"
-                  style={{ color: 'white' }}
+                  style={{ color: 'black' }}
                   className="Navbar_chevronDown__BsZjb rotate-[-85deg]"
                 >
                   <path d="M11 9l11 11 11-11"></path>
@@ -543,7 +543,7 @@ export default async function Home() {
         <div className="mx-auto max-w-7xl overflow-hidden px-6 sm:pb-6 lg:px-8">
           <div className="mt-[em] flex justify-center  gap-x-3 lg:gap-x-7">
             {footerNavigation.social.map((item) => (
-              <a key={item.link} href={item.href} className="text-[wheat] hover:text-pink-600  bg-black/60 p-1  p-[0.5rem] rounded-full">
+              <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  bg-black/60  hover:bg-black p-1  p-[0.5rem] rounded-full">
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="h-6 w-6" />
               </a>
@@ -552,16 +552,22 @@ export default async function Home() {
          
         </div>
       </div>
-       <div className="max-w-4xl mx-auto p-6 my-8">
+       <div className="max-w-4xl mx-auto p-6 my-8" id="LOCATION">
           <h2 class="group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2 -mt-6  sm:text-center">
             Location</h2>
-          <div id="MAP" class="sm:mx-auto max-w-2xl rounded-4xl">
+          <div id="MAP" class="relative sm:mx-auto max-w-2xl rounded-4xl">
             <div class="lg:rounded-4xl overflow-hidden">
               <div class="lg:p-[0.3rem] rounded-2xl  overflow hover:border hover:border-gray-100 lg:border-gray-200 ">
               <img src={'/yasmins_location_img.png'} 
               className='h-full w-full rounded-2xl'/>
             </div>
             </div>
+            <a 
+      href="https://maps.app.goo.gl/1ccoZ1b9kdXKK9Eg8"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="absolute inset-0 text-sm text-white px-4 py-4 block hover:underline"
+    />
           </div>
         </div>
 
@@ -583,7 +589,7 @@ export default async function Home() {
                 </div> 
                 <div >
                 <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300">
-                  <Link className={clsx(" hover:!text-[#f8e8cd] rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-[#03302c] !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
+                  <Link className={clsx("hover:!text-[#f8e8cd] rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-[#03302c] !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
                     href="#CALL"
                     >Book Now </Link>
                 </div>

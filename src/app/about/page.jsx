@@ -5,7 +5,7 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
-
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 
   
 const navigation = [
@@ -216,6 +216,8 @@ function About() {
       </header> */}
 
       <main className="isolate">
+      <FadeInStagger key={'CONTACT'}>
+      <FadeIn>
           {/* Image section */}
           <div className="mt-0 sm:mt-0 xl:mx-auto xl:max-w-7xl xl:px-8">
           <img
@@ -224,7 +226,8 @@ function About() {
             className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
           />
         </div>
-
+        </FadeIn>
+        <FadeIn>
         {/* Values section */}
         <div className="text-left mx-auto mt-12 lg:mt-32 max-w-7xl px-6 sm:mt-10 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
@@ -243,9 +246,10 @@ function About() {
             ))}
           </dl>
         </div>
-
+        </FadeIn>
       
         {/* Hero section */}
+        <FadeIn>
         <div className="relative isolate -z-10">
           <svg
             aria-hidden="true"
@@ -346,11 +350,13 @@ function About() {
             </div>
           </div>
         </div>
+        </FadeIn>
 
 
       
 
      {/* Logo cloud */}
+     <FadeIn>
         <div className="relative isolate -z-10 -mt-20 sm:mt-[-4em] lg:mt-[-9em] pb-24 sm:pb-44">
           <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
             <svg aria-hidden="true" className="h-[40rem] w-[80rem] flex-none stroke-gray-200">
@@ -373,6 +379,7 @@ function About() {
               <rect fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)" width="100%" height="100%" strokeWidth={0} />
             </svg>
           </div>
+
           {/* <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-lg/8 font-semibold text-gray-900">
               Trusted by the world&apos;s most innovative teams
@@ -416,7 +423,11 @@ function About() {
             </div>
           </div> */}
         </div>
+        </FadeIn>
+        </FadeInStagger>
+       
       </main>
+      
     
     </div>
   )

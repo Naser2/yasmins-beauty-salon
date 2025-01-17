@@ -214,7 +214,7 @@ function  Footer(){
                       </div> 
                        
                       <div class="font-serif mb-1 ">
-                          <a href="#MAP" class="inline">Salon Finder</a>
+                          <a href="/map" class="inline">Salon Finder</a>
                       </div> 
                        
                      
@@ -237,7 +237,7 @@ function  Footer(){
                   <div class="footer-content">
                        
                       <div class="font-serif mb-1  pt-1 lg:p-0">
-                          <a href="/pages/faq" class="inline">FAQ</a>
+                          <a href="/terms" class="inline">FAQ</a>
                       </div> 
                        
                       {/* <div class="font-serif mb-1 ">
@@ -245,11 +245,11 @@ function  Footer(){
                       </div>  */}
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/pages/shipping-returns" class="inline">Shipping &amp; Returns</a>
+                          <a href="/terms" class="inline">Shipping &amp; Returns</a>
                       </div> 
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/pages/contact-us" class="inline">Contact Us</a>
+                          <a href="/contact" class="inline">Contact Us</a>
                       </div> 
                         
                   </div> 
@@ -257,7 +257,7 @@ function  Footer(){
               <li class="text-lg footer-tab">
                   <input class="hidden" type="checkbox" id="footer-3"/>
                   <label for="footer-3" class="footer-label block py-4 lg:pt-0 lg:mb-4 font-sans uppercase">
-                      Community
+                     Ssocial Community
                   </label>
                   <div class="footer-content">
                        
@@ -282,13 +282,13 @@ function  Footer(){
                   </label>
                   <div class="footer-content">
                       <div class="font-serif mb-1 pt-1 lg:p-0">
-                          <a href="/terms-conditions" class="inline">Terms and Conditions</a>
+                          <a href="/terms" class="inline">Terms and Conditions</a>
                       </div>
                       <div class="font-serif mb-1">
-                          <a href="/pages/privacy-policy" class="inline">Privacy Policy</a>
+                          <a href="/terms#ADDITIONAL_TERMS"class="inline">Privacy Policy</a>
                       </div>
                       <div class="font-serif mb-1">
-                          <a data-acsb-custom-trigger="true" class="inline cursor-pointer">Accessibility</a>
+                          <a data-acsb-custom-trigger="true" href="map" class="inline cursor-pointer">Accessibility</a>
                       </div>
                   </div> 
               </li>
@@ -305,13 +305,13 @@ function  Footer(){
           <span class="uppercase text-sans-xs-caps">© 2025 YASMINS BEAUTY SALON LLC</span>
           <ul class="font-sans text-xs tracking-plus leading-relaxed flex">
               <li class="mr-6 hidden lg:block">
-                  <a href="/pages/terms-conditions">Terms &amp; Conditions</a>
+                  <a href="/terms">Terms &amp; Conditions</a>
               </li>
               <li class="mr-6 hidden lg:block">
-                  <a href="/pages/privacy-policy">Privacy Policy</a>
+                  <a href="/terms#ADDITIONAL_TERMS">Privacy Policy</a>
               </li>
               <li class="mr-6 hidden lg:block">
-                  <a data-acsb-custom-trigger="true" class="cursor-pointer">Accessibility</a>
+                  <a  href="/map" data-acsb-custom-trigger="true" class="cursor-pointer">Accessibility</a>
               </li> 
               <li>
               <div class="site-cta text-sm  cursor-pointer select-none lg:hidden">By Nas</div>
@@ -324,10 +324,10 @@ function  Footer(){
       <div class="flex justify-between items-center h-btn font-sans text-xs tracking-plus leading-relaxed"> 
           <ul class="flex"> 
               <li>
-                  <div class="flex"><span class="block">Designed by&nbsp;</span><a href="https://www.lottanieminen.com/" target="_blank" class="underline">Lotta Nieminen</a></div>
+                  <div class="flex"><span class="block">Designed by&nbsp;</span><a href="https://www.nassersanou.com/" target="_blank" class="underline">Nasser Sanou</a></div>
               </li>
               <li class="ml-3">
-                  <div class="flex"><span class="block">Built by&nbsp;</span><a href="https://www.baggy.studio/" target="_blank" class="underline">Baggy</a></div>
+                  <div class="flex"><span class="block">Built by&nbsp;</span><a href="https://www.giveitdone.com" target="_blank" class="underline">Give It Done</a></div>
               </li>  
           </ul>
           <ul class="flex">  
