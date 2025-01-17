@@ -218,13 +218,13 @@ function  Footer(){
                       </div> 
                        
                      
-                       
+{/*                        
                       <div class="font-serif mb-1 ">
                           <a href="/pages/beauty-burden" class="inline">Beauty Burden</a>
-                      </div> 
+                      </div>  */}
                        
                       <div class="font-serif mb-1 ">
-                          <a href="/#GIFTCARD" class="inline">Get $10 Off</a>
+                          <a href="/gift" class="inline">Get $10 Off</a>
                       </div> 
                       
                   </div> 

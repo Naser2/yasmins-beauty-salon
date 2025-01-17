@@ -18,7 +18,7 @@ import { Container } from '@/components/Container'
 import  Footer  from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
-import { Offices } from '@/components/Offices'
+import { GiftCard } from '@/components/GiftCard'
 import { SocialMedia } from '@/components/SocialMedia'
 
 
@@ -320,13 +320,19 @@ export default function Example() {
                       >
                      Contact
                       </a>
-                      
+                      <a
+                        href="/terms"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
+                      >
+                     Policy
+                      </a>
                     </div>
 
-                   <footer className="mt-[7em]  sm:mt-[8em] w-full bardrop-blur ">
-                      <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-[4rem] pt-20 sm:pb-6 lg:px-8">
-                      <p href="/contact" className=" text-centerooter-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   px-3 py-2 text-base font-semibold text-[#000000db] hover:bg-black hover:text-white">Social Media</p>
-                        <div className="mt-[2em] flex justify-center  gap-x-3 lg:gap-x-7">
+                   <footer className="mt-[1em]  sm:mt-[4em] w-full bardrop-blur ">
+                      <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-[4rem] lg:pt-20 sm:pb-6 lg:px-8">
+                      <p href="/contact" className=" text-center ooter-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   px-3 py-2 text-base font-semibold text-[#000000db] hover:bg-black hover:text-white">
+                      Social Media</p>
+                        <div className="mt-[1em] flex justify-center  gap-x-3 lg:gap-x-7">
                           {footerNavigation.social.map((item) => (
                             <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
                               <span className="sr-only">{item.name}</span>

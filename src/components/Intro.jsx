@@ -3,6 +3,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { useEffect, useState } from "react"
+import { ReusableButton } from "./ReusableButton";
 
 const { FadeInStagger, FadeIn } = require("./FadeIn")
 export default function Intro() {
@@ -27,11 +28,11 @@ export default function Intro() {
     }, 2600);
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setBookNowColorChange("bg-black text-[#f8e8cd] border-[wheat] rounded-xl");
-    }, 2800);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setBookNowColorChange("bg-black text-[#f8e8cd] border-[wheat] rounded-xl");
+  //   }, 2800);
+  // }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -75,27 +76,29 @@ export default function Intro() {
                 </span>
               </p>
             </div>
-            <div className="mt-0 sm:mt-5  flex justify-center">
-              <Link
-                className={clsx(
-                  bookNowColorChange,
-                  "px-6 py-3 z-40 transition transform hover:-translate-y-1 hover:scale-110 hover:!text-[#f8e8cd] rounded-xl !border-[wheat] px-6 py-4  transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-black hover:!border-[wheat] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360"
-                )}
-                 href="#CONTACT"
-              >
-                Book Now
-              </Link>
+            <div className="mt-6 sm:mt-5  flex-col justify-center z-20 ">
+              <div className="btn-container">
+         <ReusableButton  
+                theme="bg-[#03302c] btn_large !min-w-[300px] border-[#f5deb3] !text-[#f5deb3] hover:!text-white"  
+                href="#CONTACT">
+                  BOOK NOW
+        </ReusableButton>
+              </div>
+             
+                  <div className="mt-[2em] flex justify-center  gap-x-3 lg:gap-x-7">
+                  {footerNavigation.social.map((item) => (
+                            <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
+                              <span className="sr-only">{item.name}</span>
+                              <item.icon aria-hidden="true" className="h-6 w-6" />
+                            </a>
+                          ))}
+        
+          </div>
+            
             </div>
      <footer className="mt-[7em]  sm:mt-[8em] w-full bardrop-blur ">
-        <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-[4rem] pt-20 sm:pb-6 lg:px-8 absolute inset-x-0 sm:right-0 bottom-[-5vh] sm:bottom-[-2vh] md:bottom-[4vh] lg:bottom-[2vh] xl:bottom-[3vh] lg:!left-[-567px] xl:!left-[-667px]">
-          <div className="mt-[2em] flex justify-center  gap-x-3 lg:gap-x-7">
-            {footerNavigation.social.map((item) => (
-              <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  bg-black/60  hover:bg-black  p-1  p-[0.5rem] rounded-full">
-                <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="h-6 w-6" />
-              </a>
-            ))}
-          </div>
+        <div className="mx-auto max-w-7xl  px-6 pb-[4rem] pt-20 sm:pb-6 lg:px-8 absolute inset-x-0 sm:right-0 bottom-[-5vh] sm:bottom-[-2vh] md:bottom-[4vh] lg:bottom-[2vh] xl:bottom-[3vh] lg:!left-[-567px] xl:!left-[-667px] max-h-5rem">
+        
          
         </div>
       </footer>

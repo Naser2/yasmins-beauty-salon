@@ -33,6 +33,7 @@ import Bessseller2  from '@/images/massi/Bessseller-2.webp'
 import Bessseller3 from '@/images/massi/Bessseller-3.png'
 
 import Intro from '@/components/Intro'
+import { ReusableButton } from '@/components/ReusableButton'
 let blogArticles = (await loadMDXMetadata('blog')).slice(0, 2)
 
 export const footerNavigation = {
@@ -419,7 +420,7 @@ export default async function Home() {
               <img src={'/yasmin_intro_mobile.gif'} id="MOBILE_IMG" className='h-full aspect-[5/8] object-center object-cover min-h-[60vh lg:!min-h-[643px]  sm:!h-full  w-full min-[700px]:hidden'/>
             
            </div> 
-            <Intro />
+        <Intro />
           </div>
          <FadeInStagger key={'New Collection'}>
             <FadeIn>
@@ -465,20 +466,12 @@ export default async function Home() {
                     className="sc-AxhCb bosNnv aos-init aos-animate  text-[#011211] -mt-4"  >
                         Review our catalogue, and explore an array of services. 
                   </p >
-                  <div className="gap-x-6  md:gap-x-24 sm:space-x-4 ">
-                  <a href="#LOCATION"><button href="#/contact"
-                      id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
-                      className="sc-fznxsB cYgHSw aos-init aos-animate mr-6 hover:!bg-main hover:text-black"
-                      style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', color: 'black', backgroundColor: 'white', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
-                        Address</button></a>
-                    <a href="#CALL">
-                      <button href="#/services"
-                      id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
-                      className="sc-fznxsB cYgHSw aos-init aos-animate bg-[#03302c] text-white hover:bg-main hover:text-black" 
-                      style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
-                        Booking
-                    </button>
-                  </a>
+                  <div className="md:gap-x-6 !inline-flex  md:gap-x-24 sm:space-x-4 ">
+                      <ReusableButton href="#SERVICES" 
+                      theme="bg-white !text-black btn">SERVICES</ReusableButton>
+                      <ReusableButton  
+                      theme="bg-[#03302c] btn border-black" href="#CONTACT">BOOKING</ReusableButton>
+               
               </div>
             </div>
             </div>
@@ -486,7 +479,14 @@ export default async function Home() {
       </FadeInStagger>
      </div>
  
- 
+      {/* <a href="#CALL">
+                      <button href="#/services"
+                      id="quiz-kit-intro-button" kind="fill" font-size="13" font-family="Rubik" letter-spacing="0" font-weight="600" data-aos="fade-up" data-aos-delay="300"
+                      className="sc-fznxsB cYgHSw aos-init aos-animate bg-[#03302c] text-white hover:bg-main hover:text-black" 
+                      style={{padding: '16px', borderRadius: "0px", width: "auto", minWidth: "160px", fontSize: '13px', fontWeight: '600', margin: '10px 0px 0px', border: '1px solid rgb(0, 0, 0)', lineHeight: '1.3', height: 'auto', minHeight: 'auto', letterSpacing: "initial"}}>
+                        Booking
+                    </button>
+                  </a> */}
         
       <div className='text-center mt-32 bg-black border-t border-black min-[700px]:hidden' />
         <BestSellers />
@@ -497,7 +497,7 @@ export default async function Home() {
                 Testimonials Coming Soon
               </Testimonial> 
       <Link   href="/gift">
-        <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-black hover:border-pink-800 bg-[#f7f2f3] hover:bg-main border border-3xl rounded-xl shadow-lg hover:shadow-2xl ">
+        <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-black hover:border-pink-800 hover:bg-[#f7f2f3] bg-white border border-3xl hover:rounded-xl shadow-lg hover:shadow-2xl ">
           <div className="flex justify-between items-center">
             {/* Left-aligned text */}
             <h1 className="product-details__product-title ec-header-h3 font-display text-2xl font-semibold text-black ">
@@ -542,18 +542,18 @@ export default async function Home() {
         <div className="w-full bardrop-blur ">
         <div className="mx-auto max-w-7xl overflow-hidden px-6 sm:pb-6 lg:px-8">
           <div className="mt-[em] flex justify-center  gap-x-3 lg:gap-x-7">
-            {footerNavigation.social.map((item) => (
-              <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  bg-black/60  hover:bg-black p-1  p-[0.5rem] rounded-full">
-                <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="h-6 w-6" />
-              </a>
-            ))}
+          {footerNavigation.social.map((item) => (
+                            <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
+                              <span className="sr-only">{item.name}</span>
+                              <item.icon aria-hidden="true" className="h-6 w-6" />
+                            </a>
+                          ))}
           </div>
          
         </div>
       </div>
        <div className="max-w-4xl mx-auto p-6 my-8" id="LOCATION">
-          <h2 class="group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2 -mt-6  sm:text-center">
+          <h2 class="max-lg:hidden group-hover:!text-white group-hover:text-pink-500 font-semibold mb-2 -mt-6  sm:text-center">
             Location</h2>
           <div id="MAP" class="relative sm:mx-auto max-w-2xl rounded-4xl">
             <div class="lg:rounded-4xl overflow-hidden">
@@ -579,19 +579,25 @@ export default async function Home() {
             <img src={'/yasmin_img_mobile.png'} className='h-full w-full min-[700px]:hidden'/>
           <FadeInStagger key={'INTRO'}>
             <FadeIn>
-              <div className="absolute inset-x-0 lg:inset-x-20 top-[54%] md:top-[45%] lg:top-40%] mx-6 rounded-md py-4  md:py-12 md:px-12 scontent-center !bg-[#ff149305] transition duration-150 transform home text-center wow fadeIn text-white max-w-7xl justify-centr mx-auto rs-parallax-wrap  min-[600px]:mt-[10%]"  style={{visibility:"visible", animationName:"fadeIn"}}>
+              <div className="absolute inset-x-0 lg:inset-x-20 top-[48%] md:top-[45%] lg:top-40%] mx-6 rounded-md py-4  md:py-12 md:px-12 scontent-center !bg-[#ff149305] transition duration-150 transform home text-center wow fadeIn text-white max-w-7xl justify-centr mx-auto rs-parallax-wrap  min-[600px]:mt-[10%]"  style={{visibility:"visible", animationName:"fadeIn"}}>
               <div className="rs-parallax-wrap mb-4 inset-x-0 xl:!pb-24"  style={{position: 'absolute' , display: 'block' ,'pointer-events': 'auto', 'z-index': 9, visibility: 'visible', perspective: '601px'}}>
                 <h2 className={clsx('animation !font-bold  inline-flex text-[wheat] !text-[2.3em]  lg:text-[wheat] md:!text-[5em]  lg:!text-[4em] xl:!text-[6em]  signature-font  animated-logo pb-5')}>
                 YASMINS BEAUTY</h2>
                 </div> 
+             
                 <div className='justify-center lg:text-3xl lg:text-[wheat] max-[700px]:pt-[10%] pt-[12%] xl:pt-[11%]'>
-              <p className={clsx('justify-center text-xl sm:text-[1.8em] transition duration-250 transform text-sm text-white !text-[#f8e8cd] ')}> Our specialists at your service.</p>
+              <p className={clsx('justify-center text-xl sm:text-[1.8em] transition duration-250 transform text-sm text-white !text-[#f8e8cd] !max-lg:hidden ')}> 
+                  Our specialists at your service.
+                </p>
                 </div> 
                 <div >
-                <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300">
-                  <Link className={clsx("hover:!text-[#f8e8cd] rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-[#03302c] !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
-                    href="#CALL"
-                    >Book Now </Link>
+                <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300  ">
+                  <Link className={clsx("hover:!text-[#f8e8cd] min-w-[264px] hover:rounded-xl  !border-[wheat] ClassicButton_button__ETGhE transition group-hover:!text-[wheat]  duration-150 transform btn text-white justify-center bg-[#03302c] !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360 max-h-[5rem]")}
+                       href="tel:8622526325"
+                    >Book Now 
+                  </Link>
+
+           
                 </div>
                 </div> 
               </div>
@@ -600,7 +606,7 @@ export default async function Home() {
         </div>
         
         <div class="px-6 pt-0 md:pt-0  sm:mx-0 sm:pt-5 md:px-12 border-b hover:border-teal-800 bg-[#272423] ">
-          <div href="#/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full grid-cols-2">
+          <div href="#/gift-card"  class="mx-auto max-w-7xl p-0 md:px-4 lg:px-8  grid w-full  grid-cols-2 md:grid-cols-3">
                   <ul className="max-w-4xl lg:max-w-none flex text-sm font-medium text-center text-gray-500 dark:text-gray-400">
                     <li>
                       <span className="inline-block w-full py-2 px-3">
@@ -608,6 +614,22 @@ export default async function Home() {
                       </span>
                     </li>
                   </ul>
+                  <div className="hidden md:flex items-center justify-center gap-4 mb-4 pt-4 ">
+                    
+                    <a
+                      href="tel:8622526325"
+                      className="text-lg font-bold text-gray-100  transition-colors"
+                    >
+                      862-252-6325
+                    </a>
+                    <span className="text-gray-500">|</span>
+                    <a
+                      href="tel:9733953900"
+                      className="text-lg font-bold text-gray-100  transition-colors"
+                    >
+                      973-395-3900
+                    </a>
+                  </div>
                     <div class="flex justify-end">
                       <Link   href="/about" data-tooltip-target="card-nav-tabs-example-copy-clipboard-tooltip" data-tooltip-placement="bottom" type="button"  className="flex items-center px-3 py-2 text-xs font-medium text-gray-600 hover:text-blue-700">
                         <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 44 44" width="24" aria-hidden="true" style={{color: 'white'}} class="Navbar_chevronDown__BsZjb rotate-[-85deg]"><path d="M11 9l11 11 11-11"></path></svg>

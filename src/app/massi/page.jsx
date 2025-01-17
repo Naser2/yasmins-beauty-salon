@@ -416,7 +416,7 @@ export default async function Home() {
     <div className="rs-parallax-wrap mb-4 inset-x-0 xl:!pb-24"  style={{position: 'absolute' , display: 'block' ,'pointer-events': 'auto', 'z-index': 9, visibility: 'visible', perspective: '601px'}}>
      <h2 className={clsx('animation !font-bold  inline-flex text-[wheat] !text-[2.3em]  lg:text-[wheat] md:!text-[5em]  lg:!text-[4em] xl:!text-[6em]  signature-font  animated-logo pb-12')}
      >
-       MBEAUTE NOIR</h2>
+      YASMINS BEAUTY</h2>
      </div> 
      <div className='justify-center lg:text-3xl lg:text-[wheat] max-[700px]:pt-[10%] pt-[12%] xl:pt-[11%]'>
     <p className={clsx('justify-center text-[1em] transition duration-250 transform text-sm text-white !text-[#f8e8cd] ')}> A specialist at your service.</p>
@@ -426,7 +426,8 @@ export default async function Home() {
      </div>  */}
      <div >
      <div className="justify-center flex align-center pt-2 lg:pt-10 ease-in duration-300">
-        <a className={clsx(" hover:!text-[#f8e8cd]  !border-[wheat] ClassicButton_button__ETGhE transition !text-[#845201] group-hover:!text-[wheat] duration-150 transform btn text-black justify-center bg-[#efc680ba]  !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")} href="#/services">Book Now </a>
+        <a className={clsx(" hover:!text-[#f8e8cd]  !border-[wheat] ClassicButton_button__ETGhE transition !text-[#845201] group-hover:!text-[wheat] duration-150 transform btn text-black justify-center bg-[#efc680ba]  !border-[wheat]] group-hover:!bg-black flex align-center border-2  max-w-2xl m-4 transition ease-in-out delay-250 group-hover:-translate-y-1 group-hover:scale-110 duration-360")}
+         href="#/CONTACT">Book Now </a>
      </div>
      </div> 
   

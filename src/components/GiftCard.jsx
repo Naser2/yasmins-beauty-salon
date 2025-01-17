@@ -17,7 +17,7 @@ function Office({ name,className,  children, invert = false }) {
   ) 
 }
 
-export function Offices({ invert = false, ...props }) {
+export function GiftCard({ invert = false, ...props }) {
   return (
     <ul role="list" {...props} >
       <li className='justify-center  flex align-center px-4 py-4 lg:py-[20%]'>

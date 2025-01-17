@@ -1,7 +1,7 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { Location, Offices } from '@/components/Offices'
+import { Location, GiftCard } from '@/components/GiftCard'
 import { PhoneIcon, MapIcon, LockOpenIcon, CalendarIcon, ExclamationCircleIcon  } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 
@@ -52,8 +52,8 @@ const NewContactSection = () => {
                <div className="page-width pt-4 sm:pt-12" id="1a23616c-8a74-41e2-a062-803892398db5"> 
                  <div className="section-header home text-center wow fadeIn" style={{visibility: 'visible', animationName:'fadeIn'}}>
                  <Link  href="/contact">
-                   <h2>Contacts</h2>      </Link> 
-                       <p className='text-[#073e38]'> <p className="text-center mb-8">
+                   <h2 >Contacts</h2>      </Link> 
+                       <p className='text-[#073e38] max-lg:hidden'> <p className="text-center mb-8">
         Reach out to Yasmin Beauty Shop for all your beauty needs.
       </p></p>       
                  </div>
@@ -157,9 +157,9 @@ export function GiftCardSection() {
             </div> */}
             <div className="bg-theme-2 px-4 py-4 sm:mx-0 sm:py-8 md:px-12">
               {/* <h3 className="font-display text-base font-semibold text-white px-4 py-4 ">
-                Our offices
+                Our GiftCard
               </h3> */}
-              <Offices
+              <GiftCard
                 invert
                 className="mt-0 grid grid-cols-1 gap-y-8 sm:grid-cols-2 py-4"
               />

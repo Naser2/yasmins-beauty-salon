@@ -2,17 +2,16 @@ import React from "react";
 
 export const ReusableButton = ({
   theme = "bg-black text-white",
-  hoverTheme = "bg-main text-black",
+  hoverTheme = "bg-black text-black",
   children,
   href = "#",
   isLink = true,
   onClick = () => {},
 }) => {
   const baseClasses = `
-    btn
-    ${theme}
+    text-white ${theme ?? 'btn text-white'}
     border-2 
-    transition-all duration-300 ease-in-out
+    transition-all duration-300 ease-in-out hover:border-[#f5deb3]
   `;
 
   const hoverClasses = `
@@ -22,14 +21,12 @@ export const ReusableButton = ({
   `;
 
   return isLink ? (
-    <a
+    <a 
       href={href}
       className={`${baseClasses} ${hoverClasses}`}
       style={{
         padding: "16px",
         width: "auto",
-        minWidth: "232px",
-        maxWidth: "210px",
         fontSize: "15px",
         fontWeight: "600",
         margin: "10px 0px 0px",
@@ -45,8 +42,8 @@ export const ReusableButton = ({
       style={{
         padding: "16px",
         width: "auto",
-        minWidth: "232px",
-        maxWidth: "210px",
+        minWidth: "160px",
+        maxWidth: "300px",
         fontSize: "15px",
         fontWeight: "600",
         margin: "10px 0px 0px",

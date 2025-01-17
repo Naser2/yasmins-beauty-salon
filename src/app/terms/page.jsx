@@ -1,7 +1,7 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { Location, Offices } from '@/components/Offices'
+
 
 import { PhoneIcon, MapIcon, LockOpenIcon, CalendarIcon, ExclamationCircleIcon } from '@heroicons/react/24/solid';
 
@@ -53,7 +53,7 @@ const TermsAndConditions = () => {
                   {termsDetails.map((item) => (
                       <div key={item.id} className="p-6 border rounded-lg hover:shadow-lg">
                           <div className="flex items-center mb-4">
-                              <span className="text-pink-500 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 mr-4">
+                              <span className="text-main bg-[#093834de] hover:text-[#f5deb3] w-10 h-10 p-[0.3px] flex items-center justify-center rounded-full mr-4">
                                   {item.icon}
                               </span>
                               <h3 className="text-lg font-semibold">{item.title}</h3>
