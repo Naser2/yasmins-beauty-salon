@@ -186,7 +186,7 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                        <div className="group relative overflow-hidden hover:rounded-3xl bg-neutral-100">
                           <Image
                             alt=""
                             {...person.image}
@@ -239,7 +239,7 @@ function BestSellers() {
                   {group.people.map((person) => (
                     <a key={person.name}   href='#/services/5x5-hd-lace-closure'>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-1xl bg-neutral-100 rind-black ring-0">
+                        <div className="group relative overflow-hidden rounded-1xl bg-white hover:bg-main ring-black ring-1">
                           <Image
                             alt=""
                             {...person.image}

@@ -259,7 +259,7 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                        <div className="group relative overflow-hidden hover:rounded-3xl bg-neutral-100">
                           <Image
                             alt=""
                             {...person.image}
@@ -312,7 +312,7 @@ function BestSellers() {
                   {group.people.map((person) => (
                     <a key={person.name}   href='#/services/5x5-hd-lace-closure'>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-1xl bg-neutral-100 rind-black ring-0">
+                        <div className="group relative overflow-hidden rounded-1xl bg-white hover:bg-main ring-black ring-1">
                           <Image
                             alt=""
                             {...person.image}
@@ -497,7 +497,7 @@ export default async function Home() {
                 Testimonials Coming Soon
               </Testimonial> 
       <Link   href="/gift">
-        <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-black hover:border-pink-300 bg-main hover:bg-[#6420ff] bg-apricot border border-3xl rounded-xl shadow-lg hover:shadow-2xl ">
+        <div className="px-6 py-4 sm:mx-0 sm:py-8 md:px-12 border-b border-black hover:border-pink-800 bg-[#f7f2f3] hover:bg-main border border-3xl rounded-xl shadow-lg hover:shadow-2xl ">
           <div className="flex justify-between items-center">
             {/* Left-aligned text */}
             <h1 className="product-details__product-title ec-header-h3 font-display text-2xl font-semibold text-black ">
@@ -511,7 +511,7 @@ export default async function Home() {
                 data-tooltip-target="card-nav-tabs-example-copy-clipboard-tooltip"
                 data-tooltip-placement="bottom"
                 type="button"
-                className="flex items-center px-3 py-2 text-xs text-black  font-medium text-gray-600 hover:text-blue-700"
+                className="flex items-center pl-2 py-2 w-8 h-8 text-xs text-black  font-medium text-gray-600"
               >
                 <svg
                   fill="none"

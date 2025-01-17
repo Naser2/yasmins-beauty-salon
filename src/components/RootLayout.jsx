@@ -270,9 +270,9 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6 ">
-                <Disclosure as="div" className="..-mx-3">
-                  <DisclosureButton className="hover:bg-black hover:text-white header-tab group flex w-full items-center justify-between rounded-lg   border border-[#7d3b9287] hover:!border-[#03030387]  !border-[#7d3b9287] py-2 pl-3 pr-3.5 text-base/7 font-semibold text-[#000000db]   hover:bg-black hover:text-white lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6">
-                  <label for="products" class="footer-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase">PRODUCTS</label>
+                <Disclosure as="div" className="..-mx-3 lg:!max-w-[20rem]">
+                  <DisclosureButton className="hover:bg-black hover:text-white header-tab group flex w-full items-center justify-between   border-2  border-[#7d3b9287] border-black hover:!border-[#7d3b9287] py-2 pl-6 pr-3.5 text-base/7 font-semibold text-[#000000db]   hover:bg-black hover:text-white lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 lg:!pt-4 lg:!pb-0">
+                  <label for="products" class="footer-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 font-sans uppercase">PRODUCTS</label>
                     <ChevronDownIcon aria-hidden="true" className="h-7 w-7 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2 header-content">
@@ -281,7 +281,7 @@ export default function Example() {
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="font-serif mb-1  pt-1  block rounded-lg py-2 pl-6 pr-3  bg-[#ae92b84d] pl-2 "
+                        className="font-serif mb-1  pt-1  block py-2 pl-6 pr-3  bg-[#ae92b84d] pl-2 "
                       >
                         {item.name}
                       </DisclosureButton>
@@ -291,32 +291,32 @@ export default function Example() {
                 <div className="flex flex-col space-y-4">
                       <a
                         href="/"
-                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                         Home
                       </a>
                       <a
                         href="/about"
-                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                         About
                       </a>
                       <a
                         href="/gift"
-                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                         Gift Cards
                       </a>
                    
                       <a
                         href="/map"
-                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                       LOCATION
                       </a>
                       <a
                         href="/contact"
-                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b !border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6"
+                        className="header-tab  headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block  hover:bg-[#7208996e] hover:text-white   border-[#7d3b9287]  border-b hover:!border-[#7d3b9287] border w-80 px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white border-black  lg:!rounded-[0px]  lg:!border-black lg:!border-[1px]  lg:hover:!border-[1px]  sm:!px-6 !pl-6  !pl-6  !pl-6 "
                       >
                      Contact
                       </a>
@@ -325,7 +325,7 @@ export default function Example() {
 
                    <footer className="mt-[7em]  sm:mt-[8em] w-full bardrop-blur ">
                       <div className="mx-auto max-w-7xl overflow-hidden px-6 pb-[4rem] pt-20 sm:pb-6 lg:px-8">
-                      <p href="/contact" className="headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   px-3 py-2 text-base font-semibold text-[#000000db]   hover:bg-black hover:text-white">Social Media</p>
+                      <p href="/contact" className=" text-centerooter-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase headerr-label block py-4  lg:!pb-0 lg:pt-0 lg:mb-4 text-lg font-sans uppercase  block rounded-lg  hover:bg-[#7208996e] hover:text-white   px-3 py-2 text-base font-semibold text-[#000000db] hover:bg-black hover:text-white">Social Media</p>
                         <div className="mt-[2em] flex justify-center  gap-x-3 lg:gap-x-7">
                           {footerNavigation.social.map((item) => (
                             <a key={item.link} href={item.href} className="text-[wheat]  hover:text-[main]  hover:bg-black/60  bg-black  p-1  p-[0.5rem] rounded-full">
